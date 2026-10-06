@@ -1,0 +1,19 @@
+\begin{table}[t]\centering\footnotesize
+\caption{Test performance of the baselines and the six tuned neural models under the default and strict protocols}
+\begin{tabular}{lcccccc}\toprule
+Model & Parameters & Default protocol &  & Strict protocol &  & Strict, non-cohort users \\
+ &  & Hit@10 & MRR@10 & Hit@10 & MRR@10 & Hit@10 \\
+\midrule
+Popularity † & – & 0.4072 & 0.1243 & 0.3962 & 0.1138 & 0.5443 \\
+Markov (1st order) † & – & 0.8669 & 0.6613 & 0.5511 & 0.2525 & 0.7573 \\
+Markov + context (2nd order) † & – & 0.8715 & 0.6666 & 0.5561 & 0.2571 & 0.7643 \\
+LSTM, no attention & 299,469 & \textbf{0.9283 $\pm$ 0.0014} & 0.7065 $\pm$ 0.0026 & 0.8824 $\pm$ 0.0024 & \textbf{0.4215 $\pm$ 0.0023} & 0.8388 $\pm$ 0.0033 \\
+LSTM + attention (paper) & 1,101,742 & 0.9270 $\pm$ 0.0011 & 0.7030 $\pm$ 0.0021 & 0.8852 $\pm$ 0.0020 & 0.4208 $\pm$ 0.0017 & 0.8426 $\pm$ 0.0028 \\
+GRU4Rec & 184,669 & 0.9258 $\pm$ 0.0015 & 0.7042 $\pm$ 0.0020 & 0.8811 $\pm$ 0.0044 & 0.4116 $\pm$ 0.0152 & 0.8369 $\pm$ 0.0061 \\
+GRU4Rec + TA & 279,166 & 0.9276 $\pm$ 0.0025 & 0.7043 $\pm$ 0.0017 & 0.8795 $\pm$ 0.0021 & 0.3866 $\pm$ 0.0345 & 0.8349 $\pm$ 0.0030 \\
+SASRec & 216,381 & 0.9277 $\pm$ 0.0018 & 0.7120 $\pm$ 0.0019 & \textbf{0.8900 $\pm$ 0.0027} & 0.4088 $\pm$ 0.0207 & \textbf{0.8490 $\pm$ 0.0035} \\
+SASRec + TA & 200,318 & 0.9269 $\pm$ 0.0014 & \textbf{0.7126 $\pm$ 0.0017} & 0.8872 $\pm$ 0.0041 & 0.4214 $\pm$ 0.0026 & 0.8451 $\pm$ 0.0057 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize Mean ± standard deviation over ten training seeds (42, 101, 202, 7, 13, 21, 34, 55, 89, 144); test users n = 4,553 (default) and 4,551 (strict); non-cohort users n = 3,309. Best value per column in bold. † Deterministic: no seed variation. Every neural model received the same hyperparameter search (30 Optuna trials, objective = mean of default and strict validation Hit@10, selection on validation users only; Table S6) and was then trained once per seed and evaluated once on the test set. Data, split, 60-course vocabulary and full-history masking are shared by all models. TA, the paper's temporal-attention pooling. Results for the earlier small-grid models and for a search selected on default-protocol validation only are in Tables S2 and S3.
+\end{table}

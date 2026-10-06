@@ -1,0 +1,16 @@
+\begin{table}[t]\centering\footnotesize
+\caption{Forward-in-time audit (training before 2025-10-01, evaluation after)}
+\begin{tabular}{lcccccc}\toprule
+Variant & Definition & Seeds & Hit@1 & Hit@10 & MRR@10 & Paired Δ Hit@10 vs base (pp) \\
+\midrule
+S0\_base & SASRec, course sequence only (125,437 parameters) & 5 & 0.1775 & 0.5142 $\pm$ 0.0045 & 0.2774 & – \\
+T\_gap & + time since the previous course as an input sequence & 3 & 0.1907 & 0.5171 $\pm$ 0.0019 & 0.2871 & +0.51 $\pm$ 0.23 \\
+C\_calendar & + calendar month of the last course & 5 & 0.1770 & 0.5192 $\pm$ 0.0088 & 0.2798 & +0.50 $\pm$ 1.09 \\
+P\_candprior & + additive logit prior from past enrolment counts (trending in 7 and 30 days, launched and age flags) & 5 & 0.1877 & 0.5295 $\pm$ 0.0049 & 0.2895 & +1.52 $\pm$ 0.46 \\
+TCP & time gaps + calendar month + candidate prior & 5 & 0.1903 & 0.5346 $\pm$ 0.0080 & 0.2943 & +2.04 $\pm$ 0.71 \\
+Q\_trend & candidate prior with the two trending counts only & 5 & 0.1886 & 0.5293 $\pm$ 0.0066 & 0.2901 & +1.50 $\pm$ 0.61 \\
+Q4\_trend\_trans & trending counts + recent a→b transition counts & 5 & 0.1923 & 0.5321 $\pm$ 0.0049 & 0.2940 & +1.79 $\pm$ 0.64 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize Trained on 13,870 sequence prefixes with target date before 2025-10-01; evaluated on 2,101 validation users with target date on or after 2025-10-01. Validation, not test, users; seeds 7, 13, 42, 101, 202 (T\_gap: three). The target date is never an input. Differences are paired by seed; ± is the SD of the paired differences. Stability of these variants under the strict protocol was not part of this audit.
+\end{table}

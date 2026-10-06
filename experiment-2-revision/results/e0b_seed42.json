@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "run": "e0b_retrain_seed42",
+    "started": "20261003_174849",
+    "command": "experiment-2-revision/experiments/e0b_retrain.py --seed 42",
+    "args": {
+      "seed": 42,
+      "epochs": 50,
+      "batch_size": 64,
+      "patience": 5,
+      "tag": "e0b",
+      "skip_contract": false
+    },
+    "python": "3.14.4",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "data_dir": "/data/Documents/Bu-Ruktin/04-JCMM/CRE_ML_Console_Final_Artifact_Terbaru/data",
+    "tensorflow": "2.22.0-rc0",
+    "keras": "3.16.0.dev2026092404",
+    "gpus": [
+      "/physical_device:GPU:0"
+    ],
+    "data_md5": {
+      "course_alias_map.csv": "098ca854270cfa9a22d512fad49904b8",
+      "courses.csv": "3ad82e313e81214e6ae89105a311f4a2",
+      "interactions.csv": "132de42fc9526715d335b4eb3b246500",
+      "learning_progress_detail.csv": "50d782fd4a4a639f2cecafce1224d12a",
+      "learning_progress_summary.csv": "63ed1b614fb356030b58a13d1d34961f",
+      "users.csv": "df26d20a3a07e17b165533648cc526eb"
+    }
+  },
+  "metrics": {
+    "default": {
+      "Hit@1": 0.596969031407863,
+      "Hit@5": 0.8396661541840544,
+      "Hit@10": 0.923786514386119,
+      "MRR@10": 0.6993130292603168,
+      "NDCG@10": 0.7531207023005304,
+      "Coverage@10": 1.0
+    },
+    "strict": {
+      "Hit@1": 0.12612612612612611,
+      "Hit@5": 0.7697209404526477,
+      "Hit@10": 0.8824434190287849,
+      "MRR@10": 0.4181376498449669,
+      "NDCG@10": 0.5328911583543542,
+      "Coverage@10": 1.0
+    }
+  },
+  "epochs_run": 14,
+  "best_epoch": 9,
+  "val_loss_history": [
+    1.8371390104293823,
+    1.6702041625976562,
+    1.6023532152175903,
+    1.5769782066345215,
+    1.5554909706115723,
+    1.5504547357559204,
+    1.5503755807876587,
+    1.5584954023361206,
+    1.5439950227737427,
+    1.5637342929840088,
+    1.5756405591964722,
+    1.5740700960159302,
+    1.5805823802947998,
+    1.5834617614746094
+  ],
+  "within_tolerance": true
+}

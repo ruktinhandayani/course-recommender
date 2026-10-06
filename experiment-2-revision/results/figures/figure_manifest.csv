@@ -1,0 +1,8 @@
+figure,content,data_sources
+Fig1_protocol_gap,"Hit@10 under both protocols for the baselines and the six tuned neural models, and Hit@k curves","results_master.csv, p4_per_seed.csv, p4_hitk_curves.csv"
+Fig2_paired_differences,"Paired bootstrap differences in Hit@10 (95% CI) between tuned models, all users and non-cohort users","e7bstats_paired_ci.csv (variant mean_all_seeds, metric hit10)"
+Fig3_cohort,Hit@10 for cohort vs non-cohort users under both protocols; per-seed strict Hit@10 of the SASRec + features model,"results_master.csv, p4_per_seed.csv"
+Fig4_attention_diagnostics,"Attention-weight diagnostics of the three tuned attention models (default protocol, all test users with history >= 2)","p4_attention_diag.csv, p4_attention_by_len.csv"
+FigS1_forward_time_audit,"Forward-in-time audit: SASRec with time-aware inputs, trained before 2025-10-01 and evaluated after",x1_timeaudit_val.csv
+FigS2_seed_level_hit10,"Hit@10 per training seed for the six tuned neural models (E7b), both protocols",p4_per_seed.csv
+FigS3_tuning_protocol,"Hit@10 of the six models under three tuning protocols (E3-E5, E7, E7b), both test protocols",results_master.csv

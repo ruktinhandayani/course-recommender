@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "run": "e0a_verify_data",
+    "started": "20261003_174832",
+    "command": "experiment-2-revision/experiments/e0a_verify_data.py",
+    "args": {},
+    "python": "3.14.4",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "data_dir": "/data/Documents/Bu-Ruktin/04-JCMM/CRE_ML_Console_Final_Artifact_Terbaru/data",
+    "tensorflow": "2.22.0-rc0",
+    "keras": "3.16.0.dev2026092404",
+    "gpus": [
+      "/physical_device:GPU:0"
+    ],
+    "data_md5": {
+      "course_alias_map.csv": "098ca854270cfa9a22d512fad49904b8",
+      "courses.csv": "3ad82e313e81214e6ae89105a311f4a2",
+      "interactions.csv": "132de42fc9526715d335b4eb3b246500",
+      "learning_progress_detail.csv": "50d782fd4a4a639f2cecafce1224d12a",
+      "learning_progress_summary.csv": "63ed1b614fb356030b58a13d1d34961f",
+      "users.csv": "df26d20a3a07e17b165533648cc526eb"
+    }
+  },
+  "metrics": {
+    "default": {
+      "Hit@1": 0.5998242916758182,
+      "Hit@5": 0.8385679771579179,
+      "Hit@10": 0.9273006808697563,
+      "MRR@10": 0.7010925118271922,
+      "NDCG@10": 0.7551951726244,
+      "Coverage@10": 1.0
+    },
+    "strict": {
+      "Hit@1": 0.12063282794990111,
+      "Hit@5": 0.7703801362337948,
+      "Hit@10": 0.8842012744451769,
+      "MRR@10": 0.4176805725586214,
+      "NDCG@10": 0.5330007625966485,
+      "Coverage@10": 1.0
+    }
+  },
+  "pass": true
+}

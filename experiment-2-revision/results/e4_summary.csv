@@ -1,0 +1,7 @@
+,,Hit@1,Hit@1,Hit@5,Hit@5,Hit@10,Hit@10,MRR@10,MRR@10,NDCG@10,NDCG@10,n_seeds
+,,mean,std,mean,std,mean,std,mean,std,mean,std,
+model,protocol,,,,,,,,,,,
+sasrec_course_only,default,0.6126,0.0027,0.846,0.0026,0.9282,0.0019,0.7119,0.0018,0.7638,0.0013,10
+sasrec_course_only,strict,0.1264,0.0023,0.7723,0.0028,0.8909,0.0033,0.4148,0.0193,0.5322,0.0148,10
+sasrec_full_features,default,0.6125,0.0026,0.846,0.0014,0.9278,0.0022,0.7116,0.0016,0.7635,0.0012,10
+sasrec_full_features,strict,0.1274,0.0013,0.7469,0.0854,0.8634,0.0859,0.3947,0.0448,0.5098,0.0531,10

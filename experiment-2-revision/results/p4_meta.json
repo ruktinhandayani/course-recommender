@@ -1,0 +1,28 @@
+{
+  "seeds": [
+    42,
+    101,
+    202,
+    7,
+    13,
+    21,
+    34,
+    55,
+    89,
+    144
+  ],
+  "n_users": {
+    "default": 4553,
+    "strict": 4551
+  },
+  "n_cohort": {
+    "default": 1242,
+    "strict": 1242
+  },
+  "n_noncohort": {
+    "default": 3311,
+    "strict": 3309
+  },
+  "cohort_rule": "train-core history == (46, 47, 21): the fixed curriculum 46>47>21>52>60",
+  "num_courses_in_coverage_denominator": 60
+}

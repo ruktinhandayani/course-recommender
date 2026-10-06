@@ -1,0 +1,8 @@
+Variant,Definition,Seeds,Hit@1,Hit@10,MRR@10,Paired Δ Hit@10 vs base (pp)
+S0_base,"SASRec, course sequence only (125,437 parameters)",5,0.1775,0.5142 ± 0.0045,0.2774,–
+T_gap,+ time since the previous course as an input sequence,3,0.1907,0.5171 ± 0.0019,0.2871,+0.51 ± 0.23
+C_calendar,+ calendar month of the last course,5,0.1770,0.5192 ± 0.0088,0.2798,+0.50 ± 1.09
+P_candprior,"+ additive logit prior from past enrolment counts (trending in 7 and 30 days, launched and age flags)",5,0.1877,0.5295 ± 0.0049,0.2895,+1.52 ± 0.46
+TCP,time gaps + calendar month + candidate prior,5,0.1903,0.5346 ± 0.0080,0.2943,+2.04 ± 0.71
+Q_trend,candidate prior with the two trending counts only,5,0.1886,0.5293 ± 0.0066,0.2901,+1.50 ± 0.61
+Q4_trend_trans,trending counts + recent a→b transition counts,5,0.1923,0.5321 ± 0.0049,0.2940,+1.79 ± 0.64

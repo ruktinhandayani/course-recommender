@@ -1,0 +1,16 @@
+,All 10 seeds,Without seed 89,Verdict changes,Seeds won,All 10 seeds,Without seed 89,Verdict changes,Seeds won
+"Backbone, without TA: SASRec − LSTM",−0.06 (n.s.),−0.02 (n.s.),no,4/10,+0.75 (sig),+0.80 (sig),no,10/10
+"Backbone, without TA: GRU4Rec − LSTM",−0.24 (n.s.),−0.23 (n.s.),no,1/10,−0.13 (n.s.),−0.13 (n.s.),no,2/10
+"Backbone, without TA: SASRec − GRU4Rec",+0.18 (n.s.),+0.21 (n.s.),no,8/10,+0.89 (sig),+0.93 (sig),no,9/10
+"Backbone, with TA: SASRec + TA − LSTM + attention",−0.01 (n.s.),−0.00 (n.s.),no,6/10,+0.20 (n.s.),+0.20 (n.s.),no,7/10
+"Backbone, with TA: GRU4Rec + TA − LSTM + attention",+0.05 (n.s.),+0.05 (n.s.),no,6/10,−0.57 (sig),−0.57 (sig),no,0/10
+"Backbone, with TA: SASRec + TA − GRU4Rec + TA",−0.07 (n.s.),−0.06 (n.s.),no,3/10,+0.76 (sig),+0.77 (sig),no,10/10
+Temporal attention (with − without): LSTM,−0.13 (n.s.),−0.11 (n.s.),no,2/10,+0.28 (n.s.),+0.33 (n.s.),no,8/10
+Temporal attention (with − without): GRU4Rec,+0.17 (n.s.),+0.17 (n.s.),no,7/10,−0.15 (n.s.),−0.10 (n.s.),no,4/10
+Temporal attention (with − without): SASRec,−0.07 (n.s.),−0.09 (n.s.),no,3/10,−0.28 (n.s.),−0.26 (n.s.),no,2/10
+"Selection objective (E7b − E7): LSTM, no attention",−0.16 (n.s.),−0.15 (n.s.),no,2/10,−0.34 (n.s.),−0.37 (n.s.),no,0/10
+Selection objective (E7b − E7): LSTM + attention,−0.22 (n.s.),−0.24 (n.s.),no,2/10,−0.13 (n.s.),−0.18 (n.s.),no,2/10
+Selection objective (E7b − E7): GRU4Rec,+0.41 (n.s.),+0.40 (n.s.),no,10/10,+0.28 (n.s.),+0.23 (n.s.),no,5/10
+Selection objective (E7b − E7): GRU4Rec + TA,+0.16 (n.s.),+0.17 (n.s.),no,7/10,+0.03 (n.s.),−0.00 (n.s.),no,6/10
+Selection objective (E7b − E7): SASRec,+0.00 (n.s.),+0.02 (n.s.),no,4/10,+0.56 (sig),+0.54 (sig),no,10/10
+Selection objective (E7b − E7): SASRec + TA,+0.01 (n.s.),+0.03 (n.s.),no,5/10,−0.13 (n.s.),−0.11 (n.s.),no,4/10

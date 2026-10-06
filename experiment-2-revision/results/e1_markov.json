@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "run": "e1_markov",
+    "started": "20261003_181741",
+    "command": "experiment-2-revision/experiments/e1_markov.py --protocol both",
+    "args": {
+      "protocol": "both"
+    },
+    "python": "3.14.4",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "data_dir": "/data/Documents/Bu-Ruktin/04-JCMM/CRE_ML_Console_Final_Artifact_Terbaru/data",
+    "tensorflow": "2.22.0-rc0",
+    "keras": "3.16.0.dev2026092404",
+    "gpus": [
+      "/physical_device:GPU:0"
+    ],
+    "data_md5": {
+      "course_alias_map.csv": "098ca854270cfa9a22d512fad49904b8",
+      "courses.csv": "3ad82e313e81214e6ae89105a311f4a2",
+      "interactions.csv": "132de42fc9526715d335b4eb3b246500",
+      "learning_progress_detail.csv": "50d782fd4a4a639f2cecafce1224d12a",
+      "learning_progress_summary.csv": "63ed1b614fb356030b58a13d1d34961f",
+      "users.csv": "df26d20a3a07e17b165533648cc526eb"
+    }
+  },
+  "rows": [
+    {
+      "model": "popularity",
+      "protocol": "default",
+      "n": 4553,
+      "Hit@1": 0.05051614320228421,
+      "Hit@5": 0.24994509114869318,
+      "Hit@10": 0.4072040412914562,
+      "MRR@10": 0.12431093749455269,
+      "NDCG@10": 0.18953841956816067,
+      "Coverage@10": 0.6333333333333333
+    },
+    {
+      "model": "markov_1st",
+      "protocol": "default",
+      "n": 4553,
+      "Hit@1": 0.5758840325060399,
+      "Hit@5": 0.7788271469360861,
+      "Hit@10": 0.8669009444322425,
+      "MRR@10": 0.6613192418046361,
+      "NDCG@10": 0.71022021857625,
+      "Coverage@10": 0.9666666666666667
+    },
+    {
+      "model": "popularity",
+      "protocol": "strict",
+      "n": 4551,
+      "Hit@1": 0.04240826192045704,
+      "Hit@5": 0.22808174027686223,
+      "Hit@10": 0.3961766644693474,
+      "MRR@10": 0.11379899062825892,
+      "NDCG@10": 0.17856669836098962,
+      "Coverage@10": 0.6333333333333333
+    },
+    {
+      "model": "markov_1st",
+      "protocol": "strict",
+      "n": 4551,
+      "Hit@1": 0.11491979784662712,
+      "Hit@5": 0.43528894748406943,
+      "Hit@10": 0.5510876730388925,
+      "MRR@10": 0.25248166284751644,
+      "NDCG@10": 0.3240775193696627,
+      "Coverage@10": 0.9666666666666667
+    }
+  ]
+}

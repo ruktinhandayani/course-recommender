@@ -1,0 +1,24 @@
+{
+  "boot": 10000,
+  "bootstrap_seed": 0,
+  "comparisons": 13,
+  "models": [
+    "LSTM+attn (A, paper)",
+    "LSTM no attn (B)",
+    "LSTM+Keras MHA (C)",
+    "GRU4Rec",
+    "GRU4Rec+feat",
+    "GRU4Rec+TA",
+    "SASRec",
+    "SASRec+feat",
+    "SASRec+TA",
+    "Popularity",
+    "Markov 1st",
+    "Markov+ctx 2nd"
+  ],
+  "cohort_rule": "train-core history == (46,47,21)",
+  "cohort_share": {
+    "default": 0.2727871732923347,
+    "strict": 0.27290705339485827
+  }
+}

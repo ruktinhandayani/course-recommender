@@ -1,0 +1,19 @@
+\begin{table}[t]\centering\footnotesize
+\caption{All metrics for the baselines and the six tuned neural models (E7b)}
+\begin{tabular}{lcccccccccccc}\toprule
+Model & Default protocol &  &  &  &  &  & Strict protocol &  &  &  &  &  \\
+ & Hit@1 & Hit@5 & Hit@10 & MRR@10 & NDCG@10 & Coverage@10 & Hit@1 & Hit@5 & Hit@10 & MRR@10 & NDCG@10 & Coverage@10 \\
+\midrule
+Popularity & 0.0505 & 0.2499 & 0.4072 & 0.1243 & 0.1895 & 0.6333 & 0.0424 & 0.2281 & 0.3962 & 0.1138 & 0.1786 & 0.6333 \\
+Markov (1st order) & 0.5759 & 0.7788 & 0.8669 & 0.6613 & 0.7102 & 0.9667 & 0.1149 & 0.4353 & 0.5511 & 0.2525 & 0.3241 & 0.9667 \\
+Markov + context (2nd order) & 0.5779 & 0.7878 & 0.8715 & 0.6666 & 0.7155 & 0.9667 & 0.1180 & 0.4434 & 0.5561 & 0.2571 & 0.3289 & 0.9667 \\
+LSTM, no attention & 0.6057 $\pm$ 0.0040 & 0.8427 $\pm$ 0.0026 & 0.9283 $\pm$ 0.0014 & 0.7065 $\pm$ 0.0026 & 0.7596 $\pm$ 0.0021 & 0.9983 $\pm$ 0.0053 & 0.1249 $\pm$ 0.0032 & 0.7693 $\pm$ 0.0051 & 0.8824 $\pm$ 0.0024 & 0.4215 $\pm$ 0.0023 & 0.5356 $\pm$ 0.0017 & 1.0000 $\pm$ 0.0000 \\
+LSTM + attention (paper) & 0.6019 $\pm$ 0.0030 & 0.8412 $\pm$ 0.0021 & 0.9270 $\pm$ 0.0011 & 0.7030 $\pm$ 0.0021 & 0.7567 $\pm$ 0.0018 & 0.9950 $\pm$ 0.0081 & 0.1243 $\pm$ 0.0025 & 0.7695 $\pm$ 0.0028 & 0.8852 $\pm$ 0.0020 & 0.4208 $\pm$ 0.0017 & 0.5356 $\pm$ 0.0012 & 1.0000 $\pm$ 0.0000 \\
+GRU4Rec & 0.6044 $\pm$ 0.0033 & 0.8398 $\pm$ 0.0031 & 0.9258 $\pm$ 0.0015 & 0.7042 $\pm$ 0.0020 & 0.7573 $\pm$ 0.0017 & 0.9933 $\pm$ 0.0086 & 0.1236 $\pm$ 0.0022 & 0.7651 $\pm$ 0.0030 & 0.8811 $\pm$ 0.0044 & 0.4116 $\pm$ 0.0152 & 0.5275 $\pm$ 0.0119 & 0.9967 $\pm$ 0.0070 \\
+GRU4Rec + TA & 0.6039 $\pm$ 0.0031 & 0.8419 $\pm$ 0.0022 & 0.9276 $\pm$ 0.0025 & 0.7043 $\pm$ 0.0017 & 0.7578 $\pm$ 0.0016 & 1.0000 $\pm$ 0.0000 & 0.1239 $\pm$ 0.0026 & 0.7637 $\pm$ 0.0031 & 0.8795 $\pm$ 0.0021 & 0.3866 $\pm$ 0.0345 & 0.5070 $\pm$ 0.0276 & 1.0000 $\pm$ 0.0000 \\
+SASRec & 0.6127 $\pm$ 0.0028 & 0.8461 $\pm$ 0.0029 & 0.9277 $\pm$ 0.0018 & 0.7120 $\pm$ 0.0019 & 0.7637 $\pm$ 0.0015 & 0.9917 $\pm$ 0.0118 & 0.1266 $\pm$ 0.0022 & 0.7725 $\pm$ 0.0026 & 0.8900 $\pm$ 0.0027 & 0.4088 $\pm$ 0.0207 & 0.5273 $\pm$ 0.0162 & 1.0000 $\pm$ 0.0000 \\
+SASRec + TA & 0.6143 $\pm$ 0.0027 & 0.8462 $\pm$ 0.0029 & 0.9269 $\pm$ 0.0014 & 0.7126 $\pm$ 0.0017 & 0.7640 $\pm$ 0.0014 & 1.0000 $\pm$ 0.0000 & 0.1249 $\pm$ 0.0015 & 0.7712 $\pm$ 0.0033 & 0.8872 $\pm$ 0.0041 & 0.4214 $\pm$ 0.0026 & 0.5366 $\pm$ 0.0023 & 1.0000 $\pm$ 0.0000 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize Selection objective: mean of default and strict validation Hit@10. Deterministic baselines have no SD. Mean ± SD over ten seeds. Coverage@10 = distinct courses recommended in any top-10 list divided by 59 recommendable courses.
+\end{table}

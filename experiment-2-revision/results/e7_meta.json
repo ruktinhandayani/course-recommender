@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "run": "e7",
+    "started": "20261004_091349",
+    "command": "experiment-2-revision/experiments/e7_optuna.py --models lstm_noattn lstm_attn lstm_mha gru4rec gru4rec_ta sasrec sasrec_ta",
+    "args": {
+      "models": [
+        "lstm_noattn",
+        "lstm_attn",
+        "lstm_mha",
+        "gru4rec",
+        "gru4rec_ta",
+        "sasrec",
+        "sasrec_ta"
+      ],
+      "trials": 30,
+      "tune_seeds": [
+        42,
+        101
+      ],
+      "seeds": [
+        42,
+        101,
+        202,
+        7,
+        13,
+        21,
+        34,
+        55,
+        89,
+        144
+      ],
+      "sampler": "tpe",
+      "optuna_seed": 0,
+      "epochs": 50,
+      "batch_size": 64,
+      "patience": 5,
+      "tag": null,
+      "skip_final": false,
+      "quick": false
+    },
+    "python": "3.14.4",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "data_dir": "/data/Documents/Bu-Ruktin/04-JCMM/CRE_ML_Console_Final_Artifact_Terbaru/data",
+    "tensorflow": "2.22.0-rc0",
+    "keras": "3.16.0.dev2026092404",
+    "gpus": [
+      "/physical_device:GPU:0"
+    ],
+    "data_md5": {
+      "course_alias_map.csv": "098ca854270cfa9a22d512fad49904b8",
+      "courses.csv": "3ad82e313e81214e6ae89105a311f4a2",
+      "interactions.csv": "132de42fc9526715d335b4eb3b246500",
+      "learning_progress_detail.csv": "50d782fd4a4a639f2cecafce1224d12a",
+      "learning_progress_summary.csv": "63ed1b614fb356030b58a13d1d34961f",
+      "users.csv": "df26d20a3a07e17b165533648cc526eb"
+    }
+  },
+  "spaces": {
+    "lstm_attn": "course_dim {64,96,128}, comp_dim {16,32}, latent {128,192,256}, dropout U[0.1,0.5], lr logU[3e-4,3e-3]",
+    "gru4rec": "emb {64,96,128}, units {64,128,192,256}, dropout U[0.1,0.5], lr logU[3e-4,3e-3]",
+    "sasrec": "d {64,96,128}, blocks {1,2,3}, heads {2,4}, dropout U[0.1,0.5], lr logU[3e-4,3e-3]",
+    "lstm_noattn": "course_dim {64,96,128}, comp_dim {16,32}, latent {128,192,256}, dropout U[0.1,0.5], lr logU[3e-4,3e-3]",
+    "lstm_mha": "course_dim {64,96,128}, comp_dim {16,32}, latent {128,192,256}, dropout U[0.1,0.5], lr logU[3e-4,3e-3]",
+    "gru4rec_ta": "emb {64,96,128}, units {64,128,192,256}, dropout U[0.1,0.5], lr logU[3e-4,3e-3]",
+    "sasrec_ta": "d {64,96,128}, blocks {1,2,3}, heads {2,4}, dropout U[0.1,0.5], lr logU[3e-4,3e-3]"
+  },
+  "default": {
+    "gru4rec_ta": {
+      "emb": 96,
+      "units": 64,
+      "dropout": 0.2,
+      "lr": 0.001
+    },
+    "sasrec_ta": {
+      "d": 96,
+      "blocks": 1,
+      "heads": 2,
+      "dropout": 0.2,
+      "lr": 0.001
+    },
+    "lstm_mha": {
+      "course_dim": 96,
+      "comp_dim": 32,
+      "latent": 192,
+      "dropout": 0.3,
+      "lr": 0.001
+    },
+    "lstm_attn": {
+      "course_dim": 96,
+      "comp_dim": 32,
+      "latent": 192,
+      "dropout": 0.3,
+      "lr": 0.001
+    },
+    "lstm_noattn": {
+      "course_dim": 96,
+      "comp_dim": 32,
+      "latent": 192,
+      "dropout": 0.3,
+      "lr": 0.001
+    },
+    "gru4rec": {
+      "emb": 96,
+      "units": 192,
+      "dropout": 0.2,
+      "lr": 0.001
+    },
+    "sasrec": {
+      "d": 96,
+      "blocks": 2,
+      "heads": 2,
+      "dropout": 0.2,
+      "lr": 0.001
+    }
+  },
+  "best": {
+    "lstm_noattn": {
+      "cfg": {
+        "course_dim": 128,
+        "comp_dim": 32,
+        "latent": 192,
+        "dropout": 0.2485872021424031,
+        "lr": 0.00030518441354690913
+      },
+      "best_trial": 24,
+      "val_Hit@10": 0.938926320365138,
+      "val_Hit@10_E3_E5_config": 0.9320799826124755,
+      "n_trials": 30
+    },
+    "lstm_attn": {
+      "cfg": {
+        "course_dim": 128,
+        "comp_dim": 32,
+        "latent": 192,
+        "dropout": 0.3334026823506868,
+        "lr": 0.00032582684250539307
+      },
+      "best_trial": 14,
+      "val_Hit@10": 0.938600304281678,
+      "val_Hit@10_E3_E5_config": 0.9321886546402955,
+      "n_trials": 30
+    },
+    "lstm_mha": {
+      "cfg": {
+        "course_dim": 96,
+        "comp_dim": 16,
+        "latent": 128,
+        "dropout": 0.3555511263069892,
+        "lr": 0.0008704154217731101
+      },
+      "best_trial": 17,
+      "val_Hit@10": 0.9383829602260378,
+      "val_Hit@10_E3_E5_config": 0.9365355357530971,
+      "n_trials": 30
+    },
+    "gru4rec": {
+      "cfg": {
+        "emb": 64,
+        "units": 64,
+        "dropout": 0.46831627523007746,
+        "lr": 0.0029703384009175326
+      },
+      "best_trial": 18,
+      "val_Hit@10": 0.9378396000869376,
+      "val_Hit@10_E3_E5_config": 0.9351227993914366,
+      "n_trials": 30
+    },
+    "gru4rec_ta": {
+      "cfg": {
+        "emb": 128,
+        "units": 128,
+        "dropout": 0.2678469411635523,
+        "lr": 0.00039173806592687896
+      },
+      "best_trial": 13,
+      "val_Hit@10": 0.9374049119756575,
+      "val_Hit@10_E3_E5_config": 0.9321886546402955,
+      "n_trials": 30
+    },
+    "sasrec": {
+      "cfg": {
+        "d": 96,
+        "blocks": 3,
+        "heads": 4,
+        "dropout": 0.17170217112751196,
+        "lr": 0.0007723836114311244
+      },
+      "best_trial": 26,
+      "val_Hit@10": 0.9383829602260378,
+      "val_Hit@10_E3_E5_config": 0.9378396000869377,
+      "n_trials": 30
+    },
+    "sasrec_ta": {
+      "cfg": {
+        "d": 96,
+        "blocks": 3,
+        "heads": 4,
+        "dropout": 0.3115579679011618,
+        "lr": 0.0018571470500322541
+      },
+      "best_trial": 2,
+      "val_Hit@10": 0.9401217126711584,
+      "val_Hit@10_E3_E5_config": 0.9381656161703977,
+      "n_trials": 30
+    }
+  }
+}

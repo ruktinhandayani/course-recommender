@@ -1,0 +1,1861 @@
+[
+ {
+  "id": "T1",
+  "title": "Test performance of the baselines and the six tuned neural models under the default and strict protocols",
+  "header": [
+   [
+    "Model",
+    "Parameters",
+    "Default protocol",
+    "",
+    "Strict protocol",
+    "",
+    "Strict, non-cohort users"
+   ],
+   [
+    "",
+    "",
+    "Hit@10",
+    "MRR@10",
+    "Hit@10",
+    "MRR@10",
+    "Hit@10"
+   ]
+  ],
+  "rows": [
+   [
+    "Popularity †",
+    "–",
+    "0.4072",
+    "0.1243",
+    "0.3962",
+    "0.1138",
+    "0.5443"
+   ],
+   [
+    "Markov (1st order) †",
+    "–",
+    "0.8669",
+    "0.6613",
+    "0.5511",
+    "0.2525",
+    "0.7573"
+   ],
+   [
+    "Markov + context (2nd order) †",
+    "–",
+    "0.8715",
+    "0.6666",
+    "0.5561",
+    "0.2571",
+    "0.7643"
+   ],
+   [
+    "LSTM, no attention",
+    "299,469",
+    "0.9283 ± 0.0014",
+    "0.7065 ± 0.0026",
+    "0.8824 ± 0.0024",
+    "0.4215 ± 0.0023",
+    "0.8388 ± 0.0033"
+   ],
+   [
+    "LSTM + attention (paper)",
+    "1,101,742",
+    "0.9270 ± 0.0011",
+    "0.7030 ± 0.0021",
+    "0.8852 ± 0.0020",
+    "0.4208 ± 0.0017",
+    "0.8426 ± 0.0028"
+   ],
+   [
+    "GRU4Rec",
+    "184,669",
+    "0.9258 ± 0.0015",
+    "0.7042 ± 0.0020",
+    "0.8811 ± 0.0044",
+    "0.4116 ± 0.0152",
+    "0.8369 ± 0.0061"
+   ],
+   [
+    "GRU4Rec + TA",
+    "279,166",
+    "0.9276 ± 0.0025",
+    "0.7043 ± 0.0017",
+    "0.8795 ± 0.0021",
+    "0.3866 ± 0.0345",
+    "0.8349 ± 0.0030"
+   ],
+   [
+    "SASRec",
+    "216,381",
+    "0.9277 ± 0.0018",
+    "0.7120 ± 0.0019",
+    "0.8900 ± 0.0027",
+    "0.4088 ± 0.0207",
+    "0.8490 ± 0.0035"
+   ],
+   [
+    "SASRec + TA",
+    "200,318",
+    "0.9269 ± 0.0014",
+    "0.7126 ± 0.0017",
+    "0.8872 ± 0.0041",
+    "0.4214 ± 0.0026",
+    "0.8451 ± 0.0057"
+   ]
+  ],
+  "notes": "Mean ± standard deviation over ten training seeds (42, 101, 202, 7, 13, 21, 34, 55, 89, 144); test users n = 4,553 (default) and 4,551 (strict); non-cohort users n = 3,309. Best value per column in bold. † Deterministic: no seed variation. Every neural model received the same hyperparameter search (30 Optuna trials, objective = mean of default and strict validation Hit@10, selection on validation users only; Table S6) and was then trained once per seed and evaluated once on the test set. Data, split, 60-course vocabulary and full-history masking are shared by all models. TA, the paper's temporal-attention pooling. Results for the earlier small-grid models and for a search selected on default-protocol validation only are in Tables S2 and S3.",
+  "bold": [
+   [
+    3,
+    2
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    7,
+    4
+   ],
+   [
+    7,
+    6
+   ],
+   [
+    8,
+    3
+   ]
+  ],
+  "landscape": false,
+  "groups": [
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    5
+   ]
+  ]
+ },
+ {
+  "id": "T2",
+  "title": "Paired differences in Hit@10 between the tuned models, with 95% bootstrap intervals",
+  "header": [
+   [
+    "Comparison (first minus second)",
+    "Default, all users",
+    "",
+    "Strict, all users",
+    "",
+    "Strict, non-cohort users",
+    ""
+   ],
+   [
+    "",
+    "Δ [95% CI]",
+    "p (Holm)",
+    "Δ [95% CI]",
+    "p (Holm)",
+    "Δ [95% CI]",
+    "p (Holm)"
+   ]
+  ],
+  "rows": [
+   [
+    "Backbone, without TA",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "SASRec − LSTM",
+    "−0.06 [−0.37, +0.25]",
+    "1.000",
+    "+0.75 [+0.35, +1.16]",
+    "0.004",
+    "+1.02 [+0.47, +1.57]",
+    "0.003"
+   ],
+   [
+    "GRU4Rec − LSTM",
+    "−0.24 [−0.52, +0.03]",
+    "1.000",
+    "−0.13 [−0.44, +0.19]",
+    "1.000",
+    "−0.19 [−0.63, +0.23]",
+    "1.000"
+   ],
+   [
+    "SASRec − GRU4Rec",
+    "+0.18 [−0.16, +0.51]",
+    "1.000",
+    "+0.89 [+0.49, +1.29]",
+    "0.002",
+    "+1.21 [+0.67, +1.76]",
+    "0.002"
+   ],
+   [
+    "Backbone, with TA",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "SASRec + TA − LSTM + attention",
+    "−0.01 [−0.30, +0.27]",
+    "1.000",
+    "+0.20 [−0.14, +0.55]",
+    "1.000",
+    "+0.25 [−0.22, +0.72]",
+    "1.000"
+   ],
+   [
+    "GRU4Rec + TA − LSTM + attention",
+    "+0.05 [−0.23, +0.34]",
+    "1.000",
+    "−0.57 [−0.89, −0.24]",
+    "0.016",
+    "−0.77 [−1.22, −0.32]",
+    "0.019"
+   ],
+   [
+    "SASRec + TA − GRU4Rec + TA",
+    "−0.07 [−0.36, +0.22]",
+    "1.000",
+    "+0.76 [+0.41, +1.11]",
+    "0.002",
+    "+1.02 [+0.55, +1.50]",
+    "0.002"
+   ],
+   [
+    "Temporal attention (with − without)",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "LSTM",
+    "−0.13 [−0.34, +0.08]",
+    "1.000",
+    "+0.28 [+0.02, +0.54]",
+    "0.419",
+    "+0.38 [+0.02, +0.73]",
+    "0.434"
+   ],
+   [
+    "GRU4Rec",
+    "+0.17 [−0.07, +0.42]",
+    "1.000",
+    "−0.15 [−0.43, +0.12]",
+    "1.000",
+    "−0.19 [−0.57, +0.19]",
+    "1.000"
+   ],
+   [
+    "SASRec",
+    "−0.07 [−0.30, +0.14]",
+    "1.000",
+    "−0.28 [−0.55, −0.01]",
+    "0.506",
+    "−0.38 [−0.74, −0.02]",
+    "0.516"
+   ],
+   [
+    "Selection objective (E7b − E7)",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "LSTM, no attention",
+    "−0.16 [−0.37, +0.04]",
+    "1.000",
+    "−0.34 [−0.59, −0.09]",
+    "0.105",
+    "−0.44 [−0.78, −0.10]",
+    "0.153"
+   ],
+   [
+    "LSTM + attention",
+    "−0.22 [−0.40, −0.05]",
+    "0.221",
+    "−0.13 [−0.34, +0.07]",
+    "1.000",
+    "−0.18 [−0.46, +0.09]",
+    "1.000"
+   ],
+   [
+    "GRU4Rec",
+    "+0.41 [+0.14, +0.67]",
+    "0.072",
+    "+0.28 [−0.01, +0.58]",
+    "0.625",
+    "+0.39 [−0.02, +0.81]",
+    "0.689"
+   ],
+   [
+    "GRU4Rec + TA",
+    "+0.16 [−0.02, +0.35]",
+    "1.000",
+    "+0.03 [−0.19, +0.25]",
+    "1.000",
+    "+0.05 [−0.25, +0.35]",
+    "1.000"
+   ],
+   [
+    "SASRec",
+    "+0.00 [−0.19, +0.20]",
+    "1.000",
+    "+0.56 [+0.33, +0.79]",
+    "0.002",
+    "+0.77 [+0.46, +1.08]",
+    "0.002"
+   ],
+   [
+    "SASRec + TA",
+    "+0.01 [−0.15, +0.16]",
+    "1.000",
+    "−0.13 [−0.34, +0.08]",
+    "1.000",
+    "−0.18 [−0.47, +0.11]",
+    "1.000"
+   ],
+   [
+    "Reference baselines",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "LSTM + attention − Markov (1st order)",
+    "+6.01 [+5.20, +6.82]",
+    "0.002",
+    "+33.41 [+31.93, +34.92]",
+    "0.002",
+    "+8.53 [+7.23, +9.83]",
+    "0.002"
+   ],
+   [
+    "SASRec − Markov (1st order)",
+    "+6.08 [+5.26, +6.89]",
+    "0.002",
+    "+33.89 [+32.42, +35.38]",
+    "0.002",
+    "+9.16 [+7.91, +10.43]",
+    "0.002"
+   ],
+   [
+    "LSTM + attention − Popularity",
+    "+51.98 [+50.37, +53.56]",
+    "0.002",
+    "+48.90 [+47.26, +50.55]",
+    "0.002",
+    "+29.83 [+27.93, +31.69]",
+    "0.002"
+   ]
+  ],
+  "notes": "Δ in percentage points of Hit@10; positive favours the first-named model. Per-user outcomes were averaged over the ten seeds, then 10,000 bootstrap resamples of test users gave percentile intervals; p values are two-sided bootstrap p values adjusted by the Holm method within each protocol and user subset (24 comparisons; 0.002 is the resolution limit of 10,000 resamples after adjustment). Bold: Holm-adjusted p < 0.05. Non-cohort users exclude the 1,242 users whose history is the fixed curriculum 46→47→21. The E7 models were selected on default-protocol validation Hit@10 only. Other metrics: Table S4.",
+  "bold": [
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    6,
+    5
+   ],
+   [
+    7,
+    3
+   ],
+   [
+    7,
+    5
+   ],
+   [
+    17,
+    3
+   ],
+   [
+    17,
+    5
+   ],
+   [
+    20,
+    1
+   ],
+   [
+    20,
+    3
+   ],
+   [
+    20,
+    5
+   ],
+   [
+    21,
+    1
+   ],
+   [
+    21,
+    3
+   ],
+   [
+    21,
+    5
+   ],
+   [
+    22,
+    1
+   ],
+   [
+    22,
+    3
+   ],
+   [
+    22,
+    5
+   ]
+  ],
+  "landscape": false,
+  "groups": [
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    5,
+    6
+   ]
+  ]
+ },
+ {
+  "id": "T3",
+  "title": "Hit@10 for cohort and non-cohort users",
+  "header": [
+   [
+    "Model",
+    "Default protocol",
+    "",
+    "",
+    "Strict protocol",
+    "",
+    ""
+   ],
+   [
+    "",
+    "Cohort (n = 1,242)",
+    "Non-cohort (n = 3,311)",
+    "All (n = 4,553)",
+    "Cohort (n = 1,242)",
+    "Non-cohort (n = 3,309)",
+    "All (n = 4,551)"
+   ]
+  ],
+  "rows": [
+   [
+    "Popularity",
+    "0.0016",
+    "0.5593",
+    "0.4072",
+    "0.0016",
+    "0.5443",
+    "0.3962"
+   ],
+   [
+    "Markov (1st order)",
+    "1.0000",
+    "0.8170",
+    "0.8669",
+    "0.0016",
+    "0.7573",
+    "0.5511"
+   ],
+   [
+    "Markov + context (2nd order)",
+    "1.0000",
+    "0.8233",
+    "0.8715",
+    "0.0016",
+    "0.7643",
+    "0.5561"
+   ],
+   [
+    "LSTM, no attention",
+    "0.9994",
+    "0.9016",
+    "0.9283",
+    "0.9986",
+    "0.8388",
+    "0.8824"
+   ],
+   [
+    "LSTM + attention (paper)",
+    "0.9998",
+    "0.8997",
+    "0.9270",
+    "0.9987",
+    "0.8426",
+    "0.8852"
+   ],
+   [
+    "GRU4Rec",
+    "0.9996",
+    "0.8982",
+    "0.9258",
+    "0.9989",
+    "0.8369",
+    "0.8811"
+   ],
+   [
+    "GRU4Rec + TA",
+    "0.9994",
+    "0.9006",
+    "0.9276",
+    "0.9984",
+    "0.8349",
+    "0.8795"
+   ],
+   [
+    "SASRec",
+    "0.9999",
+    "0.9005",
+    "0.9277",
+    "0.9992",
+    "0.8490",
+    "0.8900"
+   ],
+   [
+    "SASRec + TA",
+    "0.9996",
+    "0.8996",
+    "0.9269",
+    "0.9993",
+    "0.8451",
+    "0.8872"
+   ]
+  ],
+  "notes": "Cohort users are those whose training history is exactly the curriculum prefix 46→47→21; the full curriculum is 46→47→21→52→60. Mean over ten seeds (single value for the deterministic baselines). Under the strict protocol the Markov models cannot reach course 60 from course 21 because course 52 (the validation target) is not in their history.",
+  "bold": [],
+  "landscape": false,
+  "groups": [
+   [
+    1,
+    3
+   ],
+   [
+    4,
+    6
+   ]
+  ]
+ },
+ {
+  "id": "S1",
+  "title": "All metrics for the baselines and the six tuned neural models (E7b)",
+  "header": [
+   [
+    "Model",
+    "Default protocol",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Strict protocol",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "Hit@1",
+    "Hit@5",
+    "Hit@10",
+    "MRR@10",
+    "NDCG@10",
+    "Coverage@10",
+    "Hit@1",
+    "Hit@5",
+    "Hit@10",
+    "MRR@10",
+    "NDCG@10",
+    "Coverage@10"
+   ]
+  ],
+  "rows": [
+   [
+    "Popularity",
+    "0.0505",
+    "0.2499",
+    "0.4072",
+    "0.1243",
+    "0.1895",
+    "0.6333",
+    "0.0424",
+    "0.2281",
+    "0.3962",
+    "0.1138",
+    "0.1786",
+    "0.6333"
+   ],
+   [
+    "Markov (1st order)",
+    "0.5759",
+    "0.7788",
+    "0.8669",
+    "0.6613",
+    "0.7102",
+    "0.9667",
+    "0.1149",
+    "0.4353",
+    "0.5511",
+    "0.2525",
+    "0.3241",
+    "0.9667"
+   ],
+   [
+    "Markov + context (2nd order)",
+    "0.5779",
+    "0.7878",
+    "0.8715",
+    "0.6666",
+    "0.7155",
+    "0.9667",
+    "0.1180",
+    "0.4434",
+    "0.5561",
+    "0.2571",
+    "0.3289",
+    "0.9667"
+   ],
+   [
+    "LSTM, no attention",
+    "0.6057 ± 0.0040",
+    "0.8427 ± 0.0026",
+    "0.9283 ± 0.0014",
+    "0.7065 ± 0.0026",
+    "0.7596 ± 0.0021",
+    "0.9983 ± 0.0053",
+    "0.1249 ± 0.0032",
+    "0.7693 ± 0.0051",
+    "0.8824 ± 0.0024",
+    "0.4215 ± 0.0023",
+    "0.5356 ± 0.0017",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "LSTM + attention (paper)",
+    "0.6019 ± 0.0030",
+    "0.8412 ± 0.0021",
+    "0.9270 ± 0.0011",
+    "0.7030 ± 0.0021",
+    "0.7567 ± 0.0018",
+    "0.9950 ± 0.0081",
+    "0.1243 ± 0.0025",
+    "0.7695 ± 0.0028",
+    "0.8852 ± 0.0020",
+    "0.4208 ± 0.0017",
+    "0.5356 ± 0.0012",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "GRU4Rec",
+    "0.6044 ± 0.0033",
+    "0.8398 ± 0.0031",
+    "0.9258 ± 0.0015",
+    "0.7042 ± 0.0020",
+    "0.7573 ± 0.0017",
+    "0.9933 ± 0.0086",
+    "0.1236 ± 0.0022",
+    "0.7651 ± 0.0030",
+    "0.8811 ± 0.0044",
+    "0.4116 ± 0.0152",
+    "0.5275 ± 0.0119",
+    "0.9967 ± 0.0070"
+   ],
+   [
+    "GRU4Rec + TA",
+    "0.6039 ± 0.0031",
+    "0.8419 ± 0.0022",
+    "0.9276 ± 0.0025",
+    "0.7043 ± 0.0017",
+    "0.7578 ± 0.0016",
+    "1.0000 ± 0.0000",
+    "0.1239 ± 0.0026",
+    "0.7637 ± 0.0031",
+    "0.8795 ± 0.0021",
+    "0.3866 ± 0.0345",
+    "0.5070 ± 0.0276",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "SASRec",
+    "0.6127 ± 0.0028",
+    "0.8461 ± 0.0029",
+    "0.9277 ± 0.0018",
+    "0.7120 ± 0.0019",
+    "0.7637 ± 0.0015",
+    "0.9917 ± 0.0118",
+    "0.1266 ± 0.0022",
+    "0.7725 ± 0.0026",
+    "0.8900 ± 0.0027",
+    "0.4088 ± 0.0207",
+    "0.5273 ± 0.0162",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "SASRec + TA",
+    "0.6143 ± 0.0027",
+    "0.8462 ± 0.0029",
+    "0.9269 ± 0.0014",
+    "0.7126 ± 0.0017",
+    "0.7640 ± 0.0014",
+    "1.0000 ± 0.0000",
+    "0.1249 ± 0.0015",
+    "0.7712 ± 0.0033",
+    "0.8872 ± 0.0041",
+    "0.4214 ± 0.0026",
+    "0.5366 ± 0.0023",
+    "1.0000 ± 0.0000"
+   ]
+  ],
+  "notes": "Selection objective: mean of default and strict validation Hit@10. Deterministic baselines have no SD. Mean ± SD over ten seeds. Coverage@10 = distinct courses recommended in any top-10 list divided by 59 recommendable courses.",
+  "bold": [],
+  "landscape": true,
+  "groups": [
+   [
+    1,
+    6
+   ],
+   [
+    7,
+    12
+   ]
+  ]
+ },
+ {
+  "id": "S2",
+  "title": "All metrics for the models tuned on default-protocol validation Hit@10 only (E7)",
+  "header": [
+   [
+    "Model",
+    "Default protocol",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Strict protocol",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "Hit@1",
+    "Hit@5",
+    "Hit@10",
+    "MRR@10",
+    "NDCG@10",
+    "Coverage@10",
+    "Hit@1",
+    "Hit@5",
+    "Hit@10",
+    "MRR@10",
+    "NDCG@10",
+    "Coverage@10"
+   ]
+  ],
+  "rows": [
+   [
+    "LSTM, no attention",
+    "0.6020 ± 0.0027",
+    "0.8455 ± 0.0028",
+    "0.9299 ± 0.0019",
+    "0.7041 ± 0.0026",
+    "0.7582 ± 0.0022",
+    "1.0000 ± 0.0000",
+    "0.1222 ± 0.0023",
+    "0.7669 ± 0.0039",
+    "0.8858 ± 0.0020",
+    "0.4184 ± 0.0013",
+    "0.5340 ± 0.0013",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "LSTM + attention (paper)",
+    "0.6025 ± 0.0028",
+    "0.8430 ± 0.0019",
+    "0.9292 ± 0.0021",
+    "0.7042 ± 0.0019",
+    "0.7581 ± 0.0016",
+    "1.0000 ± 0.0000",
+    "0.1231 ± 0.0019",
+    "0.7705 ± 0.0031",
+    "0.8866 ± 0.0028",
+    "0.4203 ± 0.0022",
+    "0.5356 ± 0.0021",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "GRU4Rec",
+    "0.6042 ± 0.0030",
+    "0.8369 ± 0.0023",
+    "0.9217 ± 0.0021",
+    "0.7033 ± 0.0018",
+    "0.7557 ± 0.0016",
+    "1.0000 ± 0.0000",
+    "0.1271 ± 0.0042",
+    "0.7659 ± 0.0035",
+    "0.8783 ± 0.0025",
+    "0.4049 ± 0.0330",
+    "0.5212 ± 0.0267",
+    "0.9967 ± 0.0070"
+   ],
+   [
+    "GRU4Rec + TA",
+    "0.6035 ± 0.0050",
+    "0.8394 ± 0.0041",
+    "0.9259 ± 0.0019",
+    "0.7039 ± 0.0031",
+    "0.7571 ± 0.0026",
+    "1.0000 ± 0.0000",
+    "0.1243 ± 0.0022",
+    "0.7643 ± 0.0030",
+    "0.8793 ± 0.0025",
+    "0.4119 ± 0.0219",
+    "0.5272 ± 0.0178",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "SASRec",
+    "0.6120 ± 0.0033",
+    "0.8453 ± 0.0011",
+    "0.9276 ± 0.0023",
+    "0.7115 ± 0.0023",
+    "0.7634 ± 0.0021",
+    "0.9983 ± 0.0053",
+    "0.1260 ± 0.0016",
+    "0.7708 ± 0.0026",
+    "0.8843 ± 0.0020",
+    "0.4103 ± 0.0236",
+    "0.5271 ± 0.0190",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "SASRec + TA",
+    "0.6147 ± 0.0026",
+    "0.8481 ± 0.0028",
+    "0.9268 ± 0.0015",
+    "0.7130 ± 0.0015",
+    "0.7643 ± 0.0013",
+    "0.9983 ± 0.0053",
+    "0.1253 ± 0.0024",
+    "0.7730 ± 0.0030",
+    "0.8884 ± 0.0032",
+    "0.4225 ± 0.0026",
+    "0.5377 ± 0.0026",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "LSTM + Keras MHA",
+    "0.6006 ± 0.0044",
+    "0.8400 ± 0.0020",
+    "0.9263 ± 0.0026",
+    "0.7019 ± 0.0024",
+    "0.7556 ± 0.0018",
+    "0.9983 ± 0.0053",
+    "0.1260 ± 0.0020",
+    "0.7696 ± 0.0037",
+    "0.8817 ± 0.0038",
+    "0.4208 ± 0.0019",
+    "0.5348 ± 0.0018",
+    "1.0000 ± 0.0000"
+   ]
+  ],
+  "notes": "Same search as E7b, objective = validation Hit@10 of the default protocol. Mean ± SD over ten seeds. Coverage@10 = distinct courses recommended in any top-10 list divided by 59 recommendable courses.",
+  "bold": [],
+  "landscape": true,
+  "groups": [
+   [
+    1,
+    6
+   ],
+   [
+    7,
+    12
+   ]
+  ]
+ },
+ {
+  "id": "S3",
+  "title": "All metrics for the earlier models with a small tuning grid (E3–E5)",
+  "header": [
+   [
+    "Model",
+    "Default protocol",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Strict protocol",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "Hit@1",
+    "Hit@5",
+    "Hit@10",
+    "MRR@10",
+    "NDCG@10",
+    "Coverage@10",
+    "Hit@1",
+    "Hit@5",
+    "Hit@10",
+    "MRR@10",
+    "NDCG@10",
+    "Coverage@10"
+   ]
+  ],
+  "rows": [
+   [
+    "LSTM, no attention",
+    "0.5951 ± 0.0030",
+    "0.8379 ± 0.0032",
+    "0.9239 ± 0.0015",
+    "0.6974 ± 0.0016",
+    "0.7516 ± 0.0012",
+    "0.9983 ± 0.0053",
+    "0.1221 ± 0.0028",
+    "0.7647 ± 0.0047",
+    "0.8809 ± 0.0040",
+    "0.4167 ± 0.0031",
+    "0.5314 ± 0.0029",
+    "0.9983 ± 0.0053"
+   ],
+   [
+    "LSTM + attention (paper)",
+    "0.5937 ± 0.0041",
+    "0.8377 ± 0.0043",
+    "0.9235 ± 0.0030",
+    "0.6966 ± 0.0029",
+    "0.7510 ± 0.0023",
+    "0.9983 ± 0.0053",
+    "0.1223 ± 0.0027",
+    "0.7668 ± 0.0023",
+    "0.8821 ± 0.0019",
+    "0.4121 ± 0.0133",
+    "0.5281 ± 0.0106",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "LSTM + Keras MHA",
+    "0.5966 ± 0.0028",
+    "0.8371 ± 0.0028",
+    "0.9255 ± 0.0026",
+    "0.6984 ± 0.0025",
+    "0.7528 ± 0.0021",
+    "0.9983 ± 0.0053",
+    "0.1225 ± 0.0036",
+    "0.7661 ± 0.0048",
+    "0.8804 ± 0.0045",
+    "0.4077 ± 0.0196",
+    "0.5243 ± 0.0162",
+    "0.9983 ± 0.0053"
+   ],
+   [
+    "GRU4Rec",
+    "0.5981 ± 0.0039",
+    "0.8362 ± 0.0044",
+    "0.9242 ± 0.0021",
+    "0.6989 ± 0.0026",
+    "0.7528 ± 0.0023",
+    "0.9983 ± 0.0053",
+    "0.1218 ± 0.0021",
+    "0.7634 ± 0.0042",
+    "0.8811 ± 0.0024",
+    "0.4052 ± 0.0197",
+    "0.5223 ± 0.0157",
+    "0.9967 ± 0.0070"
+   ],
+   [
+    "GRU4Rec + TA",
+    "0.6002 ± 0.0024",
+    "0.8338 ± 0.0033",
+    "0.9192 ± 0.0021",
+    "0.6995 ± 0.0019",
+    "0.7521 ± 0.0018",
+    "1.0000 ± 0.0000",
+    "0.1241 ± 0.0025",
+    "0.7568 ± 0.0097",
+    "0.8742 ± 0.0041",
+    "0.4097 ± 0.0138",
+    "0.5243 ± 0.0112",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "GRU4Rec + features",
+    "0.6020 ± 0.0034",
+    "0.8389 ± 0.0017",
+    "0.9248 ± 0.0030",
+    "0.7024 ± 0.0020",
+    "0.7557 ± 0.0018",
+    "1.0000 ± 0.0000",
+    "0.1232 ± 0.0025",
+    "0.7662 ± 0.0042",
+    "0.8816 ± 0.0035",
+    "0.3951 ± 0.0286",
+    "0.5145 ± 0.0227",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "SASRec",
+    "0.6126 ± 0.0027",
+    "0.8460 ± 0.0026",
+    "0.9282 ± 0.0019",
+    "0.7119 ± 0.0018",
+    "0.7638 ± 0.0013",
+    "0.9900 ± 0.0086",
+    "0.1264 ± 0.0023",
+    "0.7723 ± 0.0028",
+    "0.8909 ± 0.0033",
+    "0.4148 ± 0.0193",
+    "0.5322 ± 0.0148",
+    "0.9967 ± 0.0070"
+   ],
+   [
+    "SASRec + TA",
+    "0.6087 ± 0.0024",
+    "0.8432 ± 0.0024",
+    "0.9279 ± 0.0019",
+    "0.7083 ± 0.0017",
+    "0.7609 ± 0.0013",
+    "1.0000 ± 0.0000",
+    "0.1214 ± 0.0024",
+    "0.7705 ± 0.0030",
+    "0.8878 ± 0.0020",
+    "0.4188 ± 0.0018",
+    "0.5348 ± 0.0015",
+    "1.0000 ± 0.0000"
+   ],
+   [
+    "SASRec + features",
+    "0.6125 ± 0.0026",
+    "0.8460 ± 0.0014",
+    "0.9278 ± 0.0022",
+    "0.7116 ± 0.0016",
+    "0.7635 ± 0.0012",
+    "0.9950 ± 0.0081",
+    "0.1274 ± 0.0013",
+    "0.7469 ± 0.0854",
+    "0.8634 ± 0.0859",
+    "0.3947 ± 0.0448",
+    "0.5098 ± 0.0531",
+    "1.0000 ± 0.0000"
+   ]
+  ],
+  "notes": "LSTM variants used the paper's fixed architecture; GRU4Rec and SASRec were tuned on a grid of 4 to 6 configurations (validation, seed 42). Mean ± SD over ten seeds. Coverage@10 = distinct courses recommended in any top-10 list divided by 59 recommendable courses.",
+  "bold": [],
+  "landscape": true,
+  "groups": [
+   [
+    1,
+    6
+   ],
+   [
+    7,
+    12
+   ]
+  ]
+ },
+ {
+  "id": "S4",
+  "title": "Paired differences for Hit@10, Hit@1 and MRR@10 between the tuned models (E7b, all users)",
+  "header": [
+   [
+    "Comparison",
+    "Hit@10 (pp)",
+    "",
+    "Hit@1 (pp)",
+    "",
+    "MRR@10 (reciprocal-rank units)",
+    ""
+   ],
+   [
+    "",
+    "Default",
+    "Strict",
+    "Default",
+    "Strict",
+    "Default",
+    "Strict"
+   ]
+  ],
+  "rows": [
+   [
+    "Backbone, without TA: SASRec − LSTM",
+    "−0.06 [−0.37, +0.25]",
+    "+0.75 [+0.35, +1.16] *",
+    "+0.69 [+0.18, +1.21]",
+    "+0.17 [−0.25, +0.60]",
+    "+0.0055 [+0.0020, +0.0090] *",
+    "−0.0127 [−0.0158, −0.0095] *"
+   ],
+   [
+    "Backbone, without TA: GRU4Rec − LSTM",
+    "−0.24 [−0.52, +0.03]",
+    "−0.13 [−0.44, +0.19]",
+    "−0.14 [−0.55, +0.28]",
+    "−0.13 [−0.45, +0.21]",
+    "−0.0022 [−0.0050, +0.0005]",
+    "−0.0099 [−0.0123, −0.0075] *"
+   ],
+   [
+    "Backbone, without TA: SASRec − GRU4Rec",
+    "+0.18 [−0.16, +0.51]",
+    "+0.89 [+0.49, +1.29] *",
+    "+0.83 [+0.29, +1.38] *",
+    "+0.29 [−0.14, +0.73]",
+    "+0.0077 [+0.0040, +0.0115] *",
+    "−0.0028 [−0.0059, +0.0003]"
+   ],
+   [
+    "Backbone, with TA: SASRec + TA − LSTM + attention",
+    "−0.01 [−0.30, +0.27]",
+    "+0.20 [−0.14, +0.55]",
+    "+1.24 [+0.76, +1.73] *",
+    "+0.05 [−0.35, +0.46]",
+    "+0.0095 [+0.0063, +0.0129] *",
+    "+0.0006 [−0.0022, +0.0035]"
+   ],
+   [
+    "Backbone, with TA: GRU4Rec + TA − LSTM + attention",
+    "+0.05 [−0.23, +0.34]",
+    "−0.57 [−0.89, −0.24] *",
+    "+0.20 [−0.19, +0.60]",
+    "−0.04 [−0.38, +0.30]",
+    "+0.0013 [−0.0014, +0.0039]",
+    "−0.0341 [−0.0369, −0.0313] *"
+   ],
+   [
+    "Backbone, with TA: SASRec + TA − GRU4Rec + TA",
+    "−0.07 [−0.36, +0.22]",
+    "+0.76 [+0.41, +1.11] *",
+    "+1.04 [+0.55, +1.53] *",
+    "+0.10 [−0.28, +0.47]",
+    "+0.0083 [+0.0050, +0.0116] *",
+    "+0.0348 [+0.0317, +0.0378] *"
+   ],
+   [
+    "Temporal attention (with − without): LSTM",
+    "−0.13 [−0.34, +0.08]",
+    "+0.28 [+0.02, +0.54]",
+    "−0.39 [−0.69, −0.10]",
+    "−0.06 [−0.32, +0.19]",
+    "−0.0034 [−0.0054, −0.0015] *",
+    "−0.0007 [−0.0025, +0.0010]"
+   ],
+   [
+    "Temporal attention (with − without): GRU4Rec",
+    "+0.17 [−0.07, +0.42]",
+    "−0.15 [−0.43, +0.12]",
+    "−0.05 [−0.39, +0.29]",
+    "+0.02 [−0.24, +0.29]",
+    "+0.0001 [−0.0022, +0.0023]",
+    "−0.0250 [−0.0272, −0.0227] *"
+   ],
+   [
+    "Temporal attention (with − without): SASRec",
+    "−0.07 [−0.30, +0.14]",
+    "−0.28 [−0.55, −0.01]",
+    "+0.16 [−0.17, +0.48]",
+    "−0.17 [−0.47, +0.13]",
+    "+0.0006 [−0.0016, +0.0028]",
+    "+0.0126 [+0.0105, +0.0147] *"
+   ],
+   [
+    "Selection objective (E7b − E7): LSTM, no attention",
+    "−0.16 [−0.37, +0.04]",
+    "−0.34 [−0.59, −0.09]",
+    "+0.38 [+0.09, +0.67]",
+    "+0.27 [+0.03, +0.51]",
+    "+0.0024 [+0.0005, +0.0043]",
+    "+0.0031 [+0.0014, +0.0048] *"
+   ],
+   [
+    "Selection objective (E7b − E7): LSTM + attention",
+    "−0.22 [−0.40, −0.05]",
+    "−0.13 [−0.34, +0.07]",
+    "−0.07 [−0.34, +0.20]",
+    "+0.12 [−0.11, +0.34]",
+    "−0.0012 [−0.0029, +0.0005]",
+    "+0.0004 [−0.0010, +0.0019]"
+   ],
+   [
+    "Selection objective (E7b − E7): GRU4Rec",
+    "+0.41 [+0.14, +0.67]",
+    "+0.28 [−0.01, +0.58]",
+    "+0.02 [−0.34, +0.39]",
+    "−0.35 [−0.65, −0.04]",
+    "+0.0009 [−0.0014, +0.0034]",
+    "+0.0068 [+0.0046, +0.0090] *"
+   ],
+   [
+    "Selection objective (E7b − E7): GRU4Rec + TA",
+    "+0.16 [−0.02, +0.35]",
+    "+0.03 [−0.19, +0.25]",
+    "+0.04 [−0.23, +0.30]",
+    "−0.04 [−0.26, +0.18]",
+    "+0.0004 [−0.0013, +0.0021]",
+    "−0.0253 [−0.0271, −0.0234] *"
+   ],
+   [
+    "Selection objective (E7b − E7): SASRec",
+    "+0.00 [−0.19, +0.20]",
+    "+0.56 [+0.33, +0.79] *",
+    "+0.07 [−0.20, +0.35]",
+    "+0.06 [−0.18, +0.30]",
+    "+0.0005 [−0.0013, +0.0023]",
+    "−0.0015 [−0.0031, +0.0002]"
+   ],
+   [
+    "Selection objective (E7b − E7): SASRec + TA",
+    "+0.01 [−0.15, +0.16]",
+    "−0.13 [−0.34, +0.08]",
+    "−0.04 [−0.28, +0.20]",
+    "−0.04 [−0.25, +0.17]",
+    "−0.0004 [−0.0019, +0.0010]",
+    "−0.0010 [−0.0024, +0.0003]"
+   ]
+  ],
+  "notes": "Same method and comparisons as Table 2 (first minus second). * Holm-adjusted p < 0.05. MRR@10 under the strict protocol varies strongly between seeds for several models (SD up to 0.035; Table S1), so differences in that column should be read with caution. Machine-readable version with all subsets and p values: results/e7bstats_paired_ci.csv.",
+  "bold": [],
+  "landscape": true,
+  "groups": [
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    5,
+    6
+   ]
+  ]
+ },
+ {
+  "id": "S5",
+  "title": "Sensitivity of the paired Hit@10 differences (E7b) to seed 89 and to seed choice",
+  "header": [
+   [
+    "Comparison",
+    "Default protocol",
+    "",
+    "",
+    "",
+    "Strict protocol",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "All 10 seeds",
+    "Without seed 89",
+    "Verdict changes",
+    "Seeds won",
+    "All 10 seeds",
+    "Without seed 89",
+    "Verdict changes",
+    "Seeds won"
+   ]
+  ],
+  "rows": [
+   [
+    "Backbone, without TA: SASRec − LSTM",
+    "−0.06 (n.s.)",
+    "−0.02 (n.s.)",
+    "no",
+    "4/10",
+    "+0.75 (sig)",
+    "+0.80 (sig)",
+    "no",
+    "10/10"
+   ],
+   [
+    "Backbone, without TA: GRU4Rec − LSTM",
+    "−0.24 (n.s.)",
+    "−0.23 (n.s.)",
+    "no",
+    "1/10",
+    "−0.13 (n.s.)",
+    "−0.13 (n.s.)",
+    "no",
+    "2/10"
+   ],
+   [
+    "Backbone, without TA: SASRec − GRU4Rec",
+    "+0.18 (n.s.)",
+    "+0.21 (n.s.)",
+    "no",
+    "8/10",
+    "+0.89 (sig)",
+    "+0.93 (sig)",
+    "no",
+    "9/10"
+   ],
+   [
+    "Backbone, with TA: SASRec + TA − LSTM + attention",
+    "−0.01 (n.s.)",
+    "−0.00 (n.s.)",
+    "no",
+    "6/10",
+    "+0.20 (n.s.)",
+    "+0.20 (n.s.)",
+    "no",
+    "7/10"
+   ],
+   [
+    "Backbone, with TA: GRU4Rec + TA − LSTM + attention",
+    "+0.05 (n.s.)",
+    "+0.05 (n.s.)",
+    "no",
+    "6/10",
+    "−0.57 (sig)",
+    "−0.57 (sig)",
+    "no",
+    "0/10"
+   ],
+   [
+    "Backbone, with TA: SASRec + TA − GRU4Rec + TA",
+    "−0.07 (n.s.)",
+    "−0.06 (n.s.)",
+    "no",
+    "3/10",
+    "+0.76 (sig)",
+    "+0.77 (sig)",
+    "no",
+    "10/10"
+   ],
+   [
+    "Temporal attention (with − without): LSTM",
+    "−0.13 (n.s.)",
+    "−0.11 (n.s.)",
+    "no",
+    "2/10",
+    "+0.28 (n.s.)",
+    "+0.33 (n.s.)",
+    "no",
+    "8/10"
+   ],
+   [
+    "Temporal attention (with − without): GRU4Rec",
+    "+0.17 (n.s.)",
+    "+0.17 (n.s.)",
+    "no",
+    "7/10",
+    "−0.15 (n.s.)",
+    "−0.10 (n.s.)",
+    "no",
+    "4/10"
+   ],
+   [
+    "Temporal attention (with − without): SASRec",
+    "−0.07 (n.s.)",
+    "−0.09 (n.s.)",
+    "no",
+    "3/10",
+    "−0.28 (n.s.)",
+    "−0.26 (n.s.)",
+    "no",
+    "2/10"
+   ],
+   [
+    "Selection objective (E7b − E7): LSTM, no attention",
+    "−0.16 (n.s.)",
+    "−0.15 (n.s.)",
+    "no",
+    "2/10",
+    "−0.34 (n.s.)",
+    "−0.37 (n.s.)",
+    "no",
+    "0/10"
+   ],
+   [
+    "Selection objective (E7b − E7): LSTM + attention",
+    "−0.22 (n.s.)",
+    "−0.24 (n.s.)",
+    "no",
+    "2/10",
+    "−0.13 (n.s.)",
+    "−0.18 (n.s.)",
+    "no",
+    "2/10"
+   ],
+   [
+    "Selection objective (E7b − E7): GRU4Rec",
+    "+0.41 (n.s.)",
+    "+0.40 (n.s.)",
+    "no",
+    "10/10",
+    "+0.28 (n.s.)",
+    "+0.23 (n.s.)",
+    "no",
+    "5/10"
+   ],
+   [
+    "Selection objective (E7b − E7): GRU4Rec + TA",
+    "+0.16 (n.s.)",
+    "+0.17 (n.s.)",
+    "no",
+    "7/10",
+    "+0.03 (n.s.)",
+    "−0.00 (n.s.)",
+    "no",
+    "6/10"
+   ],
+   [
+    "Selection objective (E7b − E7): SASRec",
+    "+0.00 (n.s.)",
+    "+0.02 (n.s.)",
+    "no",
+    "4/10",
+    "+0.56 (sig)",
+    "+0.54 (sig)",
+    "no",
+    "10/10"
+   ],
+   [
+    "Selection objective (E7b − E7): SASRec + TA",
+    "+0.01 (n.s.)",
+    "+0.03 (n.s.)",
+    "no",
+    "5/10",
+    "−0.13 (n.s.)",
+    "−0.11 (n.s.)",
+    "no",
+    "4/10"
+   ]
+  ],
+  "notes": "Δ in percentage points, all users; sig = Holm-adjusted p < 0.05. Seeds won = number of seeds in which the first-named model has the higher Hit@10 (seed-level paired comparison, same seed for both models). Seed 89 is the seed in which the SASRec + features model of E4 failed under the strict protocol (Figure 3c).",
+  "bold": [],
+  "landscape": true,
+  "groups": [
+   [
+    1,
+    4
+   ],
+   [
+    5,
+    8
+   ]
+  ]
+ },
+ {
+  "id": "S6",
+  "title": "Hyperparameter search: selected configurations and validation objective",
+  "header": [
+   "Search",
+   "Model",
+   "Trials",
+   "Selected configuration",
+   "Objective: E3–E5 start → selected",
+   "Parameters"
+  ],
+  "rows": [
+   [
+    "E7b",
+    "LSTM, no attention",
+    "30",
+    "course_dim=96, comp_dim=32, latent=128, dropout=0.4962, lr=0.0003028",
+    "0.9193 → 0.9241",
+    "299,469"
+   ],
+   [
+    "E7b",
+    "LSTM + attention (paper)",
+    "30",
+    "course_dim=128, comp_dim=16, latent=256, dropout=0.4426, lr=0.0003254",
+    "0.9188 → 0.9244",
+    "1,101,742"
+   ],
+   [
+    "E7b",
+    "GRU4Rec",
+    "30",
+    "emb=96, units=192, dropout=0.3792, lr=0.0005162",
+    "0.9230 → 0.9231",
+    "184,669"
+   ],
+   [
+    "E7b",
+    "GRU4Rec + TA",
+    "30",
+    "emb=128, units=192, dropout=0.4958, lr=0.0004927",
+    "0.9163 → 0.9234",
+    "279,166"
+   ],
+   [
+    "E7b",
+    "SASRec",
+    "30",
+    "d=128, blocks=2, heads=2, dropout=0.2226, lr=0.002525",
+    "0.9245 → 0.9249",
+    "216,381"
+   ],
+   [
+    "E7b",
+    "SASRec + TA",
+    "30",
+    "d=96, blocks=3, heads=4, dropout=0.2542, lr=0.001436",
+    "0.9221 → 0.9259",
+    "200,318"
+   ],
+   [
+    "E7",
+    "LSTM, no attention",
+    "30",
+    "course_dim=128, comp_dim=32, latent=192, dropout=0.2486, lr=0.0003052",
+    "0.9321 → 0.9389",
+    "632,045"
+   ],
+   [
+    "E7",
+    "LSTM + attention (paper)",
+    "30",
+    "course_dim=128, comp_dim=32, latent=192, dropout=0.3334, lr=0.0003258",
+    "0.9322 → 0.9386",
+    "669,102"
+   ],
+   [
+    "E7",
+    "GRU4Rec",
+    "30",
+    "emb=64, units=64, dropout=0.4683, lr=0.00297",
+    "0.9351 → 0.9378",
+    "32,829"
+   ],
+   [
+    "E7",
+    "GRU4Rec + TA",
+    "30",
+    "emb=128, units=128, dropout=0.2678, lr=0.0003917",
+    "0.9322 → 0.9374",
+    "147,774"
+   ],
+   [
+    "E7",
+    "SASRec",
+    "30",
+    "d=96, blocks=3, heads=4, dropout=0.1717, lr=0.0007724",
+    "0.9378 → 0.9384",
+    "181,693"
+   ],
+   [
+    "E7",
+    "SASRec + TA",
+    "30",
+    "d=96, blocks=3, heads=4, dropout=0.3116, lr=0.001857",
+    "0.9382 → 0.9401",
+    "200,318"
+   ]
+  ],
+  "notes": "Optuna with the TPE sampler (seed 0, multivariate), 30 trials per model, each trial scored as the mean over two training seeds (42, 101). Trial 0 is the configuration used in E3–E5, so the selected value can only match or exceed it on validation. Objective: E7b, mean of default and strict validation Hit@10 (strict validation set: 4,221 users whose training core has at least three courses, history without the last course); E7, validation Hit@10 of the default protocol. Search space (LSTM, with and without attention): course embedding {64, 96, 128}; competency embedding {16, 32}; latent units {128, 192, 256}; dropout 0.1–0.5; learning rate 3×10⁻⁴–3×10⁻³ (log). GRU4Rec (with and without TA): embedding {64, 96, 128}; units {64, 128, 192, 256}; dropout 0.1–0.5; learning rate 3×10⁻⁴–3×10⁻³ (log). SASRec (with and without TA): d {64, 96, 128}; blocks {1, 2, 3}; heads {2, 4}; dropout 0.1–0.5; learning rate 3×10⁻⁴–3×10⁻³ (log). All models: Adam, batch size 64, at most 50 epochs, early stopping on validation loss (patience 5), learning-rate halving on plateau. The Keras MHA variant was searched in E7 only.",
+  "bold": [],
+  "landscape": true,
+  "groups": null
+ },
+ {
+  "id": "S7",
+  "title": "Forward-in-time audit (training before 2025-10-01, evaluation after)",
+  "header": [
+   "Variant",
+   "Definition",
+   "Seeds",
+   "Hit@1",
+   "Hit@10",
+   "MRR@10",
+   "Paired Δ Hit@10 vs base (pp)"
+  ],
+  "rows": [
+   [
+    "S0_base",
+    "SASRec, course sequence only (125,437 parameters)",
+    "5",
+    "0.1775",
+    "0.5142 ± 0.0045",
+    "0.2774",
+    "–"
+   ],
+   [
+    "T_gap",
+    "+ time since the previous course as an input sequence",
+    "3",
+    "0.1907",
+    "0.5171 ± 0.0019",
+    "0.2871",
+    "+0.51 ± 0.23"
+   ],
+   [
+    "C_calendar",
+    "+ calendar month of the last course",
+    "5",
+    "0.1770",
+    "0.5192 ± 0.0088",
+    "0.2798",
+    "+0.50 ± 1.09"
+   ],
+   [
+    "P_candprior",
+    "+ additive logit prior from past enrolment counts (trending in 7 and 30 days, launched and age flags)",
+    "5",
+    "0.1877",
+    "0.5295 ± 0.0049",
+    "0.2895",
+    "+1.52 ± 0.46"
+   ],
+   [
+    "TCP",
+    "time gaps + calendar month + candidate prior",
+    "5",
+    "0.1903",
+    "0.5346 ± 0.0080",
+    "0.2943",
+    "+2.04 ± 0.71"
+   ],
+   [
+    "Q_trend",
+    "candidate prior with the two trending counts only",
+    "5",
+    "0.1886",
+    "0.5293 ± 0.0066",
+    "0.2901",
+    "+1.50 ± 0.61"
+   ],
+   [
+    "Q4_trend_trans",
+    "trending counts + recent a→b transition counts",
+    "5",
+    "0.1923",
+    "0.5321 ± 0.0049",
+    "0.2940",
+    "+1.79 ± 0.64"
+   ]
+  ],
+  "notes": "Trained on 13,870 sequence prefixes with target date before 2025-10-01; evaluated on 2,101 validation users with target date on or after 2025-10-01. Validation, not test, users; seeds 7, 13, 42, 101, 202 (T_gap: three). The target date is never an input. Differences are paired by seed; ± is the SD of the paired differences. Stability of these variants under the strict protocol was not part of this audit.",
+  "bold": [],
+  "landscape": true,
+  "groups": null
+ },
+ {
+  "id": "S8",
+  "title": "Paired differences in Hit@10 for the earlier models with a small tuning grid (E3–E5)",
+  "header": [
+   [
+    "Comparison (first minus second)",
+    "Default, all users",
+    "",
+    "Strict, all users",
+    "",
+    "Strict, non-cohort users",
+    ""
+   ],
+   [
+    "",
+    "Δ [95% CI]",
+    "p (Holm)",
+    "Δ [95% CI]",
+    "p (Holm)",
+    "Δ [95% CI]",
+    "p (Holm)"
+   ]
+  ],
+  "rows": [
+   [
+    "SASRec − LSTM + attention (paper)",
+    "+0.47 [+0.13, +0.82]",
+    "0.056",
+    "+0.88 [+0.48, +1.29]",
+    "0.001",
+    "+1.19 [+0.65, +1.75]",
+    "0.001"
+   ],
+   [
+    "GRU4Rec − LSTM + attention (paper)",
+    "+0.07 [−0.20, +0.34]",
+    "1.000",
+    "−0.10 [−0.39, +0.20]",
+    "1.000",
+    "−0.15 [−0.55, +0.25]",
+    "1.000"
+   ],
+   [
+    "SASRec − GRU4Rec",
+    "+0.40 [+0.05, +0.75]",
+    "0.203",
+    "+0.98 [+0.59, +1.39]",
+    "0.001",
+    "+1.34 [+0.81, +1.89]",
+    "0.001"
+   ],
+   [
+    "LSTM + attention − LSTM without attention",
+    "−0.04 [−0.25, +0.17]",
+    "1.000",
+    "+0.12 [−0.09, +0.33]",
+    "0.820",
+    "+0.17 [−0.12, +0.47]",
+    "1.000"
+   ],
+   [
+    "LSTM + attention − LSTM + Keras MHA",
+    "−0.20 [−0.41, −0.00]",
+    "0.337",
+    "+0.17 [−0.07, +0.41]",
+    "0.700",
+    "+0.23 [−0.10, +0.55]",
+    "0.867"
+   ],
+   [
+    "GRU4Rec + TA − GRU4Rec",
+    "−0.50 [−0.77, −0.22]",
+    "0.001",
+    "−0.69 [−1.00, −0.37]",
+    "0.001",
+    "−0.92 [−1.35, −0.49]",
+    "0.001"
+   ],
+   [
+    "SASRec + TA − SASRec",
+    "−0.04 [−0.24, +0.17]",
+    "1.000",
+    "−0.31 [−0.54, −0.08]",
+    "0.043",
+    "−0.42 [−0.75, −0.10]",
+    "0.073"
+   ],
+   [
+    "SASRec + features − SASRec",
+    "−0.05 [−0.18, +0.08]",
+    "1.000",
+    "−2.74 [−2.95, −2.54]",
+    "0.001",
+    "−0.03 [−0.25, +0.19]",
+    "1.000"
+   ],
+   [
+    "GRU4Rec + features − GRU4Rec",
+    "+0.05 [−0.15, +0.25]",
+    "1.000",
+    "+0.05 [−0.15, +0.26]",
+    "1.000",
+    "+0.07 [−0.21, +0.36]",
+    "1.000"
+   ]
+  ],
+  "notes": "Same method as Table 2 (13 comparisons per Holm family, including reference baselines not shown). In these models the paper's LSTM had not been tuned while GRU4Rec and SASRec had; Table 2 repeats the comparison after equal tuning and the sign of several differences changes (Figure S3). Bold: Holm-adjusted p < 0.05.",
+  "bold": [
+   [
+    0,
+    3
+   ],
+   [
+    0,
+    5
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    2,
+    5
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    3
+   ],
+   [
+    5,
+    5
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    7,
+    3
+   ]
+  ],
+  "landscape": false,
+  "groups": [
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    5,
+    6
+   ]
+  ]
+ }
+]

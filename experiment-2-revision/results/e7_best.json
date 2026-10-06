@@ -1,0 +1,91 @@
+{
+  "lstm_noattn": {
+    "cfg": {
+      "course_dim": 128,
+      "comp_dim": 32,
+      "latent": 192,
+      "dropout": 0.2485872021424031,
+      "lr": 0.00030518441354690913
+    },
+    "best_trial": 24,
+    "val_Hit@10": 0.938926320365138,
+    "val_Hit@10_E3_E5_config": 0.9320799826124755,
+    "n_trials": 30
+  },
+  "lstm_attn": {
+    "cfg": {
+      "course_dim": 128,
+      "comp_dim": 32,
+      "latent": 192,
+      "dropout": 0.3334026823506868,
+      "lr": 0.00032582684250539307
+    },
+    "best_trial": 14,
+    "val_Hit@10": 0.938600304281678,
+    "val_Hit@10_E3_E5_config": 0.9321886546402955,
+    "n_trials": 30
+  },
+  "lstm_mha": {
+    "cfg": {
+      "course_dim": 96,
+      "comp_dim": 16,
+      "latent": 128,
+      "dropout": 0.3555511263069892,
+      "lr": 0.0008704154217731101
+    },
+    "best_trial": 17,
+    "val_Hit@10": 0.9383829602260378,
+    "val_Hit@10_E3_E5_config": 0.9365355357530971,
+    "n_trials": 30
+  },
+  "gru4rec": {
+    "cfg": {
+      "emb": 64,
+      "units": 64,
+      "dropout": 0.46831627523007746,
+      "lr": 0.0029703384009175326
+    },
+    "best_trial": 18,
+    "val_Hit@10": 0.9378396000869376,
+    "val_Hit@10_E3_E5_config": 0.9351227993914366,
+    "n_trials": 30
+  },
+  "gru4rec_ta": {
+    "cfg": {
+      "emb": 128,
+      "units": 128,
+      "dropout": 0.2678469411635523,
+      "lr": 0.00039173806592687896
+    },
+    "best_trial": 13,
+    "val_Hit@10": 0.9374049119756575,
+    "val_Hit@10_E3_E5_config": 0.9321886546402955,
+    "n_trials": 30
+  },
+  "sasrec": {
+    "cfg": {
+      "d": 96,
+      "blocks": 3,
+      "heads": 4,
+      "dropout": 0.17170217112751196,
+      "lr": 0.0007723836114311244
+    },
+    "best_trial": 26,
+    "val_Hit@10": 0.9383829602260378,
+    "val_Hit@10_E3_E5_config": 0.9378396000869377,
+    "n_trials": 30
+  },
+  "sasrec_ta": {
+    "cfg": {
+      "d": 96,
+      "blocks": 3,
+      "heads": 4,
+      "dropout": 0.3115579679011618,
+      "lr": 0.0018571470500322541
+    },
+    "best_trial": 2,
+    "val_Hit@10": 0.9401217126711584,
+    "val_Hit@10_E3_E5_config": 0.9381656161703977,
+    "n_trials": 30
+  }
+}

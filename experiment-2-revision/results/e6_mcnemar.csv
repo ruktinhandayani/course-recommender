@@ -1,0 +1,21 @@
+a,b,group,protocol,seed,a_only_correct,b_only_correct,p_mcnemar_exact,p_holm
+SASRec,"LSTM+attn (A, paper)",backbone,default,42,110,90,0.17896403953325155,1.0
+SASRec,"LSTM+attn (A, paper)",backbone,strict,42,161,116,0.008084765495579248,0.08084765495579249
+GRU4Rec,"LSTM+attn (A, paper)",backbone,default,42,115,106,0.59058206149012,1.0
+GRU4Rec,"LSTM+attn (A, paper)",backbone,strict,42,147,127,0.2509927551833466,1.0
+SASRec,GRU4Rec,backbone,default,42,104,93,0.4762667150679854,1.0
+SASRec,GRU4Rec,backbone,strict,42,142,117,0.13573207941367005,0.6786603970683502
+"LSTM+attn (A, paper)",LSTM no attn (B),attention,default,42,91,95,0.8259676274872412,1.0
+"LSTM+attn (A, paper)",LSTM no attn (B),attention,strict,42,127,133,0.7565636522688661,1.0
+"LSTM+attn (A, paper)",LSTM+Keras MHA (C),attention,default,42,107,101,0.7289185538924636,1.0
+"LSTM+attn (A, paper)",LSTM+Keras MHA (C),attention,strict,42,115,146,0.06311087240238789,0.4931947400867513
+GRU4Rec+TA,GRU4Rec,attention,default,42,105,120,0.35067196506996956,1.0
+GRU4Rec+TA,GRU4Rec,attention,strict,42,133,138,0.808073574389872,1.0
+SASRec+TA,SASRec,attention,default,42,66,57,0.47085074563938195,1.0
+SASRec+TA,SASRec,attention,strict,42,83,85,0.9385334053887999,1.0
+SASRec+feat,SASRec,features,default,42,50,53,0.8438976552528618,1.0
+SASRec+feat,SASRec,features,strict,42,82,60,0.07765321401762203,0.4931947400867513
+GRU4Rec+feat,GRU4Rec,features,default,42,95,100,0.7746233321773475,1.0
+GRU4Rec+feat,GRU4Rec,features,strict,42,110,146,0.028508923906997975,0.2565803151629818
+Markov+ctx 2nd,Markov 1st,baseline,default,deterministic,72,51,0.07090166737501427,0.7090166737501427
+Markov+ctx 2nd,Markov 1st,baseline,strict,deterministic,81,58,0.06164934251084391,0.4931947400867513

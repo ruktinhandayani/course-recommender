@@ -1,0 +1,28 @@
+{
+  "boot": 10000,
+  "comparisons": 24,
+  "models": [
+    "LSTM no attn (tuned)",
+    "LSTM+attn (tuned)",
+    "GRU4Rec (tuned)",
+    "GRU4Rec+TA (tuned)",
+    "SASRec (tuned)",
+    "SASRec+TA (tuned)",
+    "LSTM no attn (E5)",
+    "LSTM+attn (E5)",
+    "LSTM+Keras MHA (E5)",
+    "GRU4Rec (E3)",
+    "GRU4Rec+TA (E3b)",
+    "SASRec (E4)",
+    "SASRec+TA (E4b)",
+    "LSTM no attn (E7)",
+    "LSTM+attn (E7)",
+    "LSTM+Keras MHA (E7)",
+    "GRU4Rec (E7)",
+    "GRU4Rec+TA (E7)",
+    "SASRec (E7)",
+    "SASRec+TA (E7)",
+    "Markov 1st",
+    "Popularity"
+  ]
+}

@@ -1,0 +1,13 @@
+Search,Model,Trials,Selected configuration,Objective: E3–E5 start → selected,Parameters
+E7b,"LSTM, no attention",30,"course_dim=96, comp_dim=32, latent=128, dropout=0.4962, lr=0.0003028",0.9193 → 0.9241,"299,469"
+E7b,LSTM + attention (paper),30,"course_dim=128, comp_dim=16, latent=256, dropout=0.4426, lr=0.0003254",0.9188 → 0.9244,"1,101,742"
+E7b,GRU4Rec,30,"emb=96, units=192, dropout=0.3792, lr=0.0005162",0.9230 → 0.9231,"184,669"
+E7b,GRU4Rec + TA,30,"emb=128, units=192, dropout=0.4958, lr=0.0004927",0.9163 → 0.9234,"279,166"
+E7b,SASRec,30,"d=128, blocks=2, heads=2, dropout=0.2226, lr=0.002525",0.9245 → 0.9249,"216,381"
+E7b,SASRec + TA,30,"d=96, blocks=3, heads=4, dropout=0.2542, lr=0.001436",0.9221 → 0.9259,"200,318"
+E7,"LSTM, no attention",30,"course_dim=128, comp_dim=32, latent=192, dropout=0.2486, lr=0.0003052",0.9321 → 0.9389,"632,045"
+E7,LSTM + attention (paper),30,"course_dim=128, comp_dim=32, latent=192, dropout=0.3334, lr=0.0003258",0.9322 → 0.9386,"669,102"
+E7,GRU4Rec,30,"emb=64, units=64, dropout=0.4683, lr=0.00297",0.9351 → 0.9378,"32,829"
+E7,GRU4Rec + TA,30,"emb=128, units=128, dropout=0.2678, lr=0.0003917",0.9322 → 0.9374,"147,774"
+E7,SASRec,30,"d=96, blocks=3, heads=4, dropout=0.1717, lr=0.0007724",0.9378 → 0.9384,"181,693"
+E7,SASRec + TA,30,"d=96, blocks=3, heads=4, dropout=0.3116, lr=0.001857",0.9382 → 0.9401,"200,318"

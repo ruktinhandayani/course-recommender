@@ -1,0 +1,7 @@
+,,Hit@1,Hit@1,Hit@5,Hit@5,Hit@10,Hit@10,MRR@10,MRR@10,NDCG@10,NDCG@10,n_seeds
+,,mean,std,mean,std,mean,std,mean,std,mean,std,
+model,protocol,,,,,,,,,,,
+gru4rec_ta_course_only,default,0.6002,0.0024,0.8338,0.0033,0.9192,0.0021,0.6995,0.0019,0.7521,0.0018,10
+gru4rec_ta_course_only,strict,0.1241,0.0025,0.7568,0.0097,0.8742,0.0041,0.4097,0.0138,0.5243,0.0112,10
+gru4rec_ta_full_features,default,0.6008,0.0023,0.8371,0.0034,0.9237,0.0024,0.7007,0.0021,0.7541,0.0019,10
+gru4rec_ta_full_features,strict,0.1236,0.0015,0.7616,0.003,0.878,0.0023,0.41,0.0142,0.5254,0.0113,10
