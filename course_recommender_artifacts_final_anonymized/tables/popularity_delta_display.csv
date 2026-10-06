@@ -1,0 +1,6 @@
+metric,popularity_baseline,softmax_model,similarity_model,softmax_minus_popularity,similarity_minus_popularity,softmax_minus_popularity_pp,similarity_minus_popularity_pp
+Hit@1,0.0505,0.5998,0.6031,0.5493,0.5526,54.93,55.26
+Hit@5,0.2499,0.8386,0.837,0.5886,0.5871,58.86,58.71
+Hit@10,0.4068,0.9273,0.9288,0.5205,0.5221,52.05,52.21
+MRR@10,0.1243,0.7011,0.7026,0.5768,0.5783,57.68,57.83
+NDCG@10,0.1894,0.7552,0.7566,0.5658,0.5672,56.58,56.72

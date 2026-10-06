@@ -1,0 +1,2 @@
+user_id_dtype,interaction_user_id_dtype,leading_zero_user_count,leading_zero_preserved
+string,string,9543,True

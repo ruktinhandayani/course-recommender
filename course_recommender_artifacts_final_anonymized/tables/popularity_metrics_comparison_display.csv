@@ -1,0 +1,25 @@
+method,metric,score,percentage,masking_protocol
+Popularity Baseline,Hit@1,0.0505,5.05,full_pre_target_history
+Popularity Baseline,Recall@1,0.0505,5.05,full_pre_target_history
+Popularity Baseline,Hit@5,0.2499,24.99,full_pre_target_history
+Popularity Baseline,Recall@5,0.2499,24.99,full_pre_target_history
+Popularity Baseline,Hit@10,0.4068,40.68,full_pre_target_history
+Popularity Baseline,Recall@10,0.4068,40.68,full_pre_target_history
+Popularity Baseline,MRR@10,0.1243,12.43,full_pre_target_history
+Popularity Baseline,NDCG@10,0.1894,18.94,full_pre_target_history
+LSTM + Attention Softmax,Hit@1,0.5998,59.98,full_pre_target_history
+LSTM + Attention Softmax,Recall@1,0.5998,59.98,full_pre_target_history
+LSTM + Attention Softmax,Hit@5,0.8386,83.86,full_pre_target_history
+LSTM + Attention Softmax,Recall@5,0.8386,83.86,full_pre_target_history
+LSTM + Attention Softmax,Hit@10,0.9273,92.73,full_pre_target_history
+LSTM + Attention Softmax,Recall@10,0.9273,92.73,full_pre_target_history
+LSTM + Attention Softmax,MRR@10,0.7011,70.11,full_pre_target_history
+LSTM + Attention Softmax,NDCG@10,0.7552,75.52,full_pre_target_history
+LSTM + Attention Similarity,Hit@1,0.6031,60.31,full_pre_target_history
+LSTM + Attention Similarity,Recall@1,0.6031,60.31,full_pre_target_history
+LSTM + Attention Similarity,Hit@5,0.837,83.7,full_pre_target_history
+LSTM + Attention Similarity,Recall@5,0.837,83.7,full_pre_target_history
+LSTM + Attention Similarity,Hit@10,0.9288,92.88,full_pre_target_history
+LSTM + Attention Similarity,Recall@10,0.9288,92.88,full_pre_target_history
+LSTM + Attention Similarity,MRR@10,0.7026,70.26,full_pre_target_history
+LSTM + Attention Similarity,NDCG@10,0.7566,75.66,full_pre_target_history

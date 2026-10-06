@@ -1,0 +1,57 @@
+WEBSITE REKOMENDASI COURSE - PANDUAN SINGKAT
+
+1. Ekstrak seluruh isi ZIP ini ke satu folder.
+2. Pastikan Docker Desktop sudah berjalan.
+3. Salin file ".env.example" lalu ubah nama salinannya menjadi ".env".
+4. Buka terminal/PowerShell pada folder proyek.
+5. Jalankan:
+
+   docker compose up --build
+
+6. Setelah semua layanan siap, buka:
+
+   http://127.0.0.1:5173
+
+7. Login lokal:
+
+   Username: admin
+   Password: admin
+
+8. Buka halaman rekomendasi pegawai dan coba ID:
+
+   002156217
+
+   ID tanpa nol depan, yaitu 2156217, juga akan dicari secara otomatis.
+
+9. Untuk memperlihatkan panel progres belajar yang lengkap, coba:
+
+   002156394
+
+   ID ini memiliki status course, nilai, sertifikat, alasan rekomendasi,
+   dan target course yang berada di peringkat 1.
+
+HASIL YANG DIHARAPKAN UNTUK ID DEMO
+
+- Nama: Angger Eka Samekta
+- Riwayat sebelum rekomendasi: 10 course
+- Tidak ada "Course senin"
+- Rekomendasi peringkat 1: Pengoperasian Vibrating Screen
+- Course aktual berikutnya masuk peringkat 1
+
+HASIL YANG DIHARAPKAN UNTUK DEMO PROGRES 002156394
+
+- Nama: Zuhdi Muafa Fattah
+- Course yang tercatat statusnya: 32
+- Course selesai: 27
+- Tingkat penyelesaian: 84,38%
+- Nilai rata-rata: 74,93
+- Sertifikat: 8
+- Tidak ada "Course senin" pada riwayat model
+- Course aktual berikutnya masuk peringkat 1
+
+CATATAN
+
+- Artifact terbaru sudah berada di folder course_recommender_artifacts_final.
+- Artifact belum berisi batch export. Hal ini bukan kesalahan.
+- Halaman pencarian pegawai akan menghitung rekomendasi langsung memakai model.
+- Ganti password lokal sebelum website dipresentasikan atau dibagikan.

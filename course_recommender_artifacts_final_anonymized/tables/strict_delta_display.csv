@@ -1,0 +1,17 @@
+ranking_method,metric,Default pretest-history,Strict train-history,delta_strict_minus_default,delta_percent_point
+Similarity Ranking,Hit@1,0.6031,0.1189,-0.4842,-48.42
+Similarity Ranking,Hit@10,0.9288,0.8822,-0.0466,-4.66
+Similarity Ranking,Hit@5,0.837,0.7677,-0.0693,-6.93
+Similarity Ranking,MRR@10,0.7026,0.4154,-0.2872,-28.72
+Similarity Ranking,NDCG@10,0.7566,0.5307,-0.2259,-22.59
+Similarity Ranking,Recall@1,0.6031,0.1189,-0.4842,-48.42
+Similarity Ranking,Recall@10,0.9288,0.8822,-0.0466,-4.66
+Similarity Ranking,Recall@5,0.837,0.7677,-0.0693,-6.93
+Softmax Ranking,Hit@1,0.5998,0.1206,-0.4792,-47.92
+Softmax Ranking,Hit@10,0.9273,0.8842,-0.0431,-4.31
+Softmax Ranking,Hit@5,0.8386,0.7704,-0.0682,-6.82
+Softmax Ranking,MRR@10,0.7011,0.4177,-0.2834,-28.34
+Softmax Ranking,NDCG@10,0.7552,0.533,-0.2222,-22.22
+Softmax Ranking,Recall@1,0.5998,0.1206,-0.4792,-47.92
+Softmax Ranking,Recall@10,0.9273,0.8842,-0.0431,-4.31
+Softmax Ranking,Recall@5,0.8386,0.7704,-0.0682,-6.82

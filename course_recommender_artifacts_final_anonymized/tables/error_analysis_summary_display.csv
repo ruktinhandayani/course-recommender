@@ -1,0 +1,3 @@
+ranking_method,total_samples,Hit@10_count,Miss@10_count,Hit@10_percent,Miss@10_percent,avg_rank_ground_truth_when_hit,median_rank_ground_truth_when_hit,avg_history_length_hit,avg_history_length_miss,avg_target_train_frequency_hit,avg_target_train_frequency_miss
+Similarity Ranking,4553,4229,324,92.88,7.12,2.17,1.0,8.35,7.87,728.47,700.56
+Softmax Ranking,4553,4222,331,92.73,7.27,2.16,1.0,8.34,8.04,727.91,708.22

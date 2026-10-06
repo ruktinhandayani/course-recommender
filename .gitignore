@@ -1,0 +1,24 @@
+# --- Raw, identifiable data: NEVER commit these ---
+/data/
+/data_private/
+/data.zip
+*.env
+.env
+.env.production
+
+# --- Raw artifact tree derived from raw data (pre-anonymization) ---
+# Only the *_anonymized/ sibling is meant to be committed. Blocking the
+# whole directory (not just the 6 user-bearing tables) as defense-in-depth
+# against an accidental `git add .`/`git add -A`.
+/course_recommender_artifacts_final/
+
+# --- Linux-handoff dirs never meant to leave this machine ---
+/data_anonymized_old*/
+*.ipynb_checkpoints/
+
+# --- Standard noise ---
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+*.log

@@ -1,0 +1,16 @@
+canonical_course_id,course_name,description,level,kompetensi,noise_reason,is_noise_course,interaction_count
+36,Materi test 2 (upload Video),Materi test 2,Level 1,IT Business Analysis,generic test course/material,True,1681
+6572,Test 2 - doc UAT,,,,generic test course/material,True,1681
+6573,Test Course For Remedial,,,,generic test course/material,True,34
+6549,Materi Course Test,,,,generic test course/material,True,6
+23,Coba,Tes,Level 1,Authenticity,uji coba / coba course,True,2
+6551,MCL Test,,,,generic test course/material,True,2
+6550,Materi Test 1,,,,generic test course/material,True,2
+219,Test SCORM,Test SCORM,Level 1,Business Acumen,generic test course/material,True,2
+6571,Test,,,,generic test course/material,True,1
+6574,Test SSL 2,,,,generic test course/material,True,1
+5,Uji Coba Course EU,"Hanya uji coba, stress test",Level 2,Business Acumen,uji coba / coba course; description states testing only,True,0
+30,Uji Coba Create New Course ( Quality Excellence Activity),Meningkatkan Kompetensi Skill dalam Development dan Problem Solving untuk menjadi Inovasi atau improvement agar Perusahaan dapat ber adaptasi dan siap bersaing di setiap kemajuan jaman.,Level 3,Quality Management,uji coba / coba course,True,0
+88,test 1,test 1,Level 1,Authenticity,generic test course/material,True,0
+56,test 2a,test 2a,Level 1,IT Security System,generic test course/material,True,0
+649,“Test & Pilot Course”,"Test course adalah proses menguji seluruh elemen pembelajaran—mulai dari materi, media, instrumen evaluasi, hingga metode penyampaian—dalam skala kecil. Pilot course adalah uji coba penerapan kursus pada kelompok kecil yang representatif terhadap target peserta.",Level 1,Learning Management,generic test course/material,True,0

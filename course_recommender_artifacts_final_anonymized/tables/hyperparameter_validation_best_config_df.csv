@@ -1,0 +1,2 @@
+experiment,seed,evaluation_split,epochs_trained,final_train_loss,best_val_loss,Hit@1,Hit@5,Hit@10,Recall@1,Recall@5,Recall@10,MRR@10,NDCG@10,Coverage@10,course_embedding_dim,competency_embedding_dim,level_embedding_dim,latent_dim,dropout_rate,learning_rate,batch_size
+H2 - Main capacity,42,val,9,1.5421024560928345,1.5172433853149414,0.5972614648989351,0.8513366659421865,0.9397956965876983,0.5972614648989351,0.8513366659421865,0.9397956965876983,0.7065340350441415,0.7625810535220316,1.0,96,32,8,192,0.3,0.001,64

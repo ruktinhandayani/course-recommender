@@ -1,0 +1,9 @@
+MIN_COURSE_COUNT_TRAIN,is_current_setting,valid_course_count,valid_course_ratio_percent,train_rows_after_filter,train_users_after_filter,validation_samples_after_filter,validation_target_retention_percent,test_samples_after_filter,test_target_retention_percent,popularity_Hit@10,popularity_Hit@10_percent
+1,False,495,100.0,36420,4805,4785,99.58,4786,99.6,0.3874,38.74
+2,False,270,54.55,36195,4805,4758,99.02,4757,99.0,0.3891,38.91
+5,False,119,24.04,35816,4804,4702,97.86,4684,97.48,0.3958,39.58
+10,False,73,14.75,35529,4803,4653,96.84,4604,95.82,0.402,40.2
+15,False,66,13.33,35454,4803,4638,96.52,4595,95.63,0.4035,40.35
+20,True,60,12.12,35346,4803,4601,95.75,4553,94.76,0.4068,40.68
+30,False,56,11.31,35254,4803,4579,95.3,4511,93.88,0.4106,41.06
+50,False,51,10.3,35058,4802,4494,93.53,4371,90.97,0.4239,42.39

@@ -1,0 +1,5 @@
+split,rows,unique_users,unique_courses
+Train core,35346,4803,60
+Validation target,4601,4601,57
+Pretest history,39952,4804,60
+Test target,4553,4553,56

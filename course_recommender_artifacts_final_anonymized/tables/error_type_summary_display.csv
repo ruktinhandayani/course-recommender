@@ -1,0 +1,9 @@
+ranking_method,error_type,sample_count,percentage
+Similarity Ranking,Hit at Rank 1,2746,60.31
+Similarity Ranking,Hit at Rank 2-5,1065,23.39
+Similarity Ranking,Hit at Rank 6-10,418,9.18
+Similarity Ranking,Miss Top-10,324,7.12
+Softmax Ranking,Hit at Rank 1,2731,59.98
+Softmax Ranking,Hit at Rank 2-5,1087,23.87
+Softmax Ranking,Hit at Rank 6-10,404,8.87
+Softmax Ranking,Miss Top-10,331,7.27

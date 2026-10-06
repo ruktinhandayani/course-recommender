@@ -1,0 +1,34 @@
+{
+  "random_seed_numpy": 42,
+  "random_seed_tensorflow": 42,
+  "max_sequence_length": 10,
+  "min_course_count_train": 20,
+  "num_courses_in_train_vocab": 60,
+  "num_competencies_in_train_vocab": 27,
+  "num_levels_in_train_vocab": 5,
+  "course_embedding_dim": 96,
+  "competency_embedding_dim": 32,
+  "level_embedding_dim": 8,
+  "latent_dim": 192,
+  "model_version": "cre-lstm-attention-h2-seed42-fullmask-v1",
+  "final_model_config_id": "H2 - Main capacity",
+  "ranking_output_primary": "Softmax Ranking",
+  "evaluation_protocol": "temporal holdout, train-only encoder/scaler, full pre-target seen-course masking",
+  "masking_protocol": "full_pre_target_history",
+  "python_version": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+  "tensorflow_version": "2.20.0",
+  "pandas_version": "2.2.2",
+  "numpy_version": "2.0.2",
+  "custom_objects_for_loading": [
+    "TemporalAttention"
+  ],
+  "repeated_run_seeds": [
+    42,
+    101,
+    202
+  ],
+  "additional_experiment_epochs": 25,
+  "additional_experiment_batch_size": 64,
+  "hyperparameter_config_count": 3
+}

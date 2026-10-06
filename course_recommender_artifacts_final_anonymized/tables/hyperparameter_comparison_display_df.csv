@@ -1,0 +1,4 @@
+experiment,seed,evaluation_split,epochs_trained,final_train_loss,best_val_loss,Hit@1,Hit@5,Hit@10,Recall@1,Recall@5,Recall@10,MRR@10,NDCG@10,Coverage@10,course_embedding_dim,competency_embedding_dim,level_embedding_dim,latent_dim,dropout_rate,learning_rate,batch_size
+H2 - Main capacity,42,val,9,1.5421,1.5172,59.73,85.13,93.98,59.73,85.13,93.98,70.65,76.26,100.0,96,32,8,192,0.3,0.001,64
+H1 - Compact capacity,42,val,14,1.5281,1.5275,59.73,85.02,93.52,59.73,85.02,93.52,70.6,76.12,100.0,64,16,8,128,0.3,0.001,64
+H3 - Higher regularization,42,val,12,1.5627,1.525,60.05,85.09,93.5,60.05,85.09,93.5,70.8,76.26,100.0,96,32,8,192,0.4,0.0007,64

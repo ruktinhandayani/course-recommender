@@ -1,0 +1,5 @@
+comparison_status,sample_count,percentage
+Both Hit,4213,92.53
+Both Miss,315,6.92
+Only Similarity Hit,16,0.35
+Only Softmax Hit,9,0.2

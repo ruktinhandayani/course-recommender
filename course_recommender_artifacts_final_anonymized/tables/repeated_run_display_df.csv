@@ -1,0 +1,4 @@
+experiment,seed,evaluation_split,epochs_trained,final_train_loss,best_val_loss,Hit@1,Hit@5,Hit@10,Recall@1,Recall@5,Recall@10,MRR@10,NDCG@10,Coverage@10
+Main configuration seed 42,42,test,9,1.5421,1.5172,59.98,83.86,92.73,59.98,83.86,92.73,70.11,75.52,100.0
+Main configuration seed 101,101,test,10,1.4925,1.522,60.25,83.64,92.55,60.25,83.64,92.55,70.16,75.51,100.0
+Main configuration seed 202,202,test,9,1.5389,1.5481,59.85,83.88,92.69,59.85,83.88,92.69,70.08,75.49,100.0

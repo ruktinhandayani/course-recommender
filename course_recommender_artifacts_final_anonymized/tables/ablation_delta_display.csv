@@ -1,0 +1,6 @@
+experiment,ranking_method,Hit@10 (%),MRR@10 (%),NDCG@10 (%),Coverage@10 (%),Delta Hit@10 (%),Delta MRR@10 (%),Delta NDCG@10 (%),Delta Coverage@10 (%)
+A1 - Course History Only,Softmax Ranking,92.51,69.81,75.24,100.0,0.0,0.0,0.0,0.0
+A2 - Course + Competency,Softmax Ranking,92.29,69.8,75.19,100.0,-0.22,-0.02,-0.05,0.0
+A3 - Course + Competency + Level,Softmax Ranking,92.73,69.93,75.39,100.0,0.22,0.12,0.15,0.0
+A4 - Course + Competency + Level + Certificate Flag,Softmax Ranking,92.75,70.18,75.58,98.33,0.24,0.37,0.34,-1.67
+A5 - Full Feature Model,Softmax Ranking,92.73,70.11,75.52,100.0,0.22,0.29,0.28,0.0

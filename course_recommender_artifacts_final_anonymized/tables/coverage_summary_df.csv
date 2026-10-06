@@ -1,0 +1,3 @@
+model,k,total_candidate_courses,unique_recommended_courses,uncovered_courses,coverage_at_k,coverage_at_k_percent,total_recommendation_slots,valid_recommendation_slots,top_1_recommendation_share_percent,top_5_recommendation_share_percent,top_10_recommendation_share_percent
+Softmax Ranking,10,60,60,0,1.0,100.0,45530,45530,6.70546892159016,28.662420382165603,48.409839666154184
+Similarity Ranking,10,60,60,0,1.0,100.0,45530,45530,6.600043927081045,28.220953217658685,48.02328135295409

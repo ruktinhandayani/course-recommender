@@ -1,0 +1,25 @@
+method,metric,score,percentage,masking_protocol
+Popularity Baseline,Hit@1,0.05051614320228421,5.051614320228421,full_pre_target_history
+Popularity Baseline,Recall@1,0.05051614320228421,5.051614320228421,full_pre_target_history
+Popularity Baseline,Hit@5,0.24994509114869318,24.994509114869317,full_pre_target_history
+Popularity Baseline,Recall@5,0.24994509114869318,24.994509114869317,full_pre_target_history
+Popularity Baseline,Hit@10,0.4067647704810015,40.67647704810015,full_pre_target_history
+Popularity Baseline,Recall@10,0.4067647704810015,40.67647704810015,full_pre_target_history
+Popularity Baseline,MRR@10,0.1242737214953336,12.42737214953336,full_pre_target_history
+Popularity Baseline,NDCG@10,0.18941449340093947,18.941449340093946,full_pre_target_history
+LSTM + Attention Softmax,Hit@1,0.5998242916758182,59.98242916758182,full_pre_target_history
+LSTM + Attention Softmax,Recall@1,0.5998242916758182,59.98242916758182,full_pre_target_history
+LSTM + Attention Softmax,Hit@5,0.8385679771579179,83.85679771579179,full_pre_target_history
+LSTM + Attention Softmax,Recall@5,0.8385679771579179,83.85679771579179,full_pre_target_history
+LSTM + Attention Softmax,Hit@10,0.9273006808697563,92.73006808697562,full_pre_target_history
+LSTM + Attention Softmax,Recall@10,0.9273006808697563,92.73006808697562,full_pre_target_history
+LSTM + Attention Softmax,MRR@10,0.7010925118271922,70.10925118271922,full_pre_target_history
+LSTM + Attention Softmax,NDCG@10,0.7551951726244,75.51951726243999,full_pre_target_history
+LSTM + Attention Similarity,Hit@1,0.603118822754228,60.3118822754228,full_pre_target_history
+LSTM + Attention Similarity,Recall@1,0.603118822754228,60.3118822754228,full_pre_target_history
+LSTM + Attention Similarity,Hit@5,0.8370305293213266,83.70305293213266,full_pre_target_history
+LSTM + Attention Similarity,Recall@5,0.8370305293213266,83.70305293213266,full_pre_target_history
+LSTM + Attention Similarity,Hit@10,0.9288381287063474,92.88381287063474,full_pre_target_history
+LSTM + Attention Similarity,Recall@10,0.9288381287063474,92.88381287063474,full_pre_target_history
+LSTM + Attention Similarity,MRR@10,0.7025676424753956,70.25676424753956,full_pre_target_history
+LSTM + Attention Similarity,NDCG@10,0.7566013208871551,75.66013208871551,full_pre_target_history

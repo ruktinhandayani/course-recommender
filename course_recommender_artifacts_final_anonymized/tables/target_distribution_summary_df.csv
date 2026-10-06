@@ -1,0 +1,10 @@
+metric,value
+Total test samples,4553.0
+Unique target courses in test,56.0
+Top-1 target share (%),27.37
+Top-5 target share (%),47.0
+Top-10 target share (%),63.83
+Top-20 target share (%),81.07
+Max target count for one course,1246.0
+Median target count per course,34.5
+Min target count for one course,1.0

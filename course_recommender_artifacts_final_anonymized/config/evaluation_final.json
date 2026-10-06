@@ -1,0 +1,20 @@
+{
+  "model_version": "cre-lstm-attention-h2-seed42-fullmask-v1",
+  "final_model_config_id": "H2 - Main capacity",
+  "ranking_method": "Softmax Ranking",
+  "masking_protocol": "full_pre_target_history",
+  "random_seed": 42,
+  "max_sequence_length": 10,
+  "test_samples": 4553,
+  "hit_at_1": 0.5998242916758182,
+  "hit_at_5": 0.8385679771579179,
+  "hit_at_10": 0.9273006808697563,
+  "recall_at_1": 0.5998242916758182,
+  "recall_at_5": 0.8385679771579179,
+  "recall_at_10": 0.9273006808697563,
+  "mrr_at_5": 0.6891280474412476,
+  "ndcg_at_5": 0.7263779146289785,
+  "mrr_at_10": 0.7010925118271922,
+  "ndcg_at_10": 0.7551951726244,
+  "coverage_at_10": 1.0
+}

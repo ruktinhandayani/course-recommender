@@ -1,0 +1,8 @@
+metric,value
+Course catalog sebelum noise cleaning,1114
+Course noise terdeteksi dan dihapus,15
+Course catalog setelah noise cleaning,1099
+Interaksi yang terdampak noise cleaning,3412
+Persentase interaksi terdampak (%),4.3969
+Course kandidat manual review,1
+Keputusan Course senin,keep

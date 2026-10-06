@@ -1,0 +1,39 @@
+ranking_method,course_encoded,recommendation_count,average_rank,canonical_course_id,course_name,kompetensi,level,recommendation_share_percent
+Popularity Baseline,6,3510,7.15,1024,Occupational Safety Management Level 1,Occupational Safety Management,Level 1,7.71
+Popularity Baseline,7,3322,6.2,1025,Process Safety Management Level 1,Process Safety Management,Level 1,7.3
+Popularity Baseline,8,3301,5.24,1026,Occupational Safety and Health Level 2,Occupational Safety Management,Level 2,7.25
+Popularity Baseline,5,3280,7.97,1023,Marketing Action,Marketing Strategy,Level 2,7.2
+Popularity Baseline,15,3163,4.79,167,Respecful Workplace Policy,Coaching & Developing Others,Level 1,6.95
+Popularity Baseline,35,3115,8.82,209,Pengoperasian Rotary Coater,Multiple Fertilizer Production,Level 2,6.84
+Popularity Baseline,4,3040,8.42,1022,Product Knowledge,Brand and Marketing Communication,Level 2,6.68
+Popularity Baseline,24,2980,4.06,191,Penyusunan KPI Manajemen & Individu,Performance Management,Level 1,6.55
+Popularity Baseline,20,2964,3.16,174,Model Tata Kelola Risiko Tiga Lini,Risk Management,Level 1,6.51
+Popularity Baseline,47,2886,2.28,54,MCL,Authenticity,Level 1,6.34
+Popularity Baseline,21,2884,3.28,183,Project Management,Strategic Planning Management,Level 2,6.33
+Popularity Baseline,46,2832,1.3,52,RWP,Building Partnerships,Level 1,6.22
+Popularity Baseline,19,2373,1.0,173,Budaya AKHLAK,Change Leadership,Level 1,5.21
+Popularity Baseline,37,1072,7.87,214,Cybersecurity Awareness,IT Security System,Level 1,2.35
+Popularity Baseline,38,1072,8.75,218,Korespondensi dan Manajemen Arsip,Secretariat,Level 2,2.35
+Popularity Baseline,22,897,8.05,189,Proses Produksi NPK Granulasi Industry Partner,Multiple Fertilizer Production,Level 3,1.97
+Popularity Baseline,34,635,8.29,208,Pengoperasian Recycle Regulator Conveyor,Multiple Fertilizer Production,Level 2,1.39
+Popularity Baseline,1,455,8.82,1001,Pengoperasian Vibrating Screen,Multiple Fertilizer Production,Level 2,1.0
+Popularity Baseline,42,390,8.04,386,Cybersecurity Awareness 2025 (Updated),IT Security System,Level 1,0.86
+Popularity Baseline,57,356,8.7,898,Mengelola Gudang Bahan Baku di Pabrik NPK Granulasi),Multiple Fertilizer Production,Level 2,0.78
+Popularity Baseline,36,186,9.38,210,Pengenalan NPK Reaksi,Multiple Fertilizer Production,Level 2,0.41
+Popularity Baseline,41,139,8.17,312,Penjelasan Project Assignment - Pengembangan Konten E-learning,Learning Management,Level 1,0.31
+Popularity Baseline,18,135,8.03,172,Materi On Boarding Industry Partner,Job Design,Level 1,0.3
+Popularity Baseline,33,114,9.75,206,Pengoperasian Rotary Cooler,Multiple Fertilizer Production,Level 2,0.25
+Popularity Baseline,49,98,8.64,564,Bagian 2 - Digital Trainer Tool Kit - Simulasi Tools,Learning Management,Level 2,0.22
+Popularity Baseline,48,92,9.16,558,Bagian 1 - Digital Trainer Tool Kit - Pemahaman Dasar,Learning Management,Level 1,0.2
+Popularity Baseline,52,50,9.7,60,Course senin,IT Business Analysis,Level 3,0.11
+Popularity Baseline,27,42,8.88,199,Pengoperasian Material Handling Equipment,Multiple Fertilizer Production,Level 2,0.09
+Popularity Baseline,58,31,8.81,902,Pengoperasian Rotary Dryer,Multiple Fertilizer Production,Level 2,0.07
+Popularity Baseline,32,19,9.0,204,Pengoperasian Drum Granulator,Multiple Fertilizer Production,Level 2,0.04
+Popularity Baseline,26,18,9.06,198,Pengantongan NPK Granulasi,Multiple Fertilizer Production,Level 2,0.04
+Popularity Baseline,30,18,9.22,202,Pengoperasian Crusher,Multiple Fertilizer Production,Level 2,0.04
+Popularity Baseline,29,16,8.62,201,Pengoperasian Furnace,Multiple Fertilizer Production,Level 2,0.04
+Popularity Baseline,40,14,9.93,311,Dasar-dasar Pengembangan Konten E-learning,Learning Management,Level 1,0.03
+Popularity Baseline,25,11,9.55,196,Operasional Bahan Baku NPK Granulasi,Multiple Fertilizer Production,Level 2,0.02
+Popularity Baseline,28,10,8.8,200,Pengoperasian Dedusting System,Multiple Fertilizer Production,Level 2,0.02
+Popularity Baseline,31,9,9.44,203,Pengoperasian Dozometer,Multiple Fertilizer Production,Level 2,0.02
+Popularity Baseline,53,1,10.0,66,Pembuatan Video Pembelajaran Menggunakan Zoom,Learning Management,Level 1,0.0

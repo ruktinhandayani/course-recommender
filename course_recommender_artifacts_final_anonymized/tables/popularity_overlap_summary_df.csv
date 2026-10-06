@@ -1,0 +1,3 @@
+model,mean_overlap_count_at_10,median_overlap_count_at_10,mean_overlap_percent_at_10,mean_jaccard_at_10
+LSTM + Attention Similarity,3.775971886668131,3.0,37.75971886668131,0.24660984055361523
+LSTM + Attention Softmax,4.054249945091149,4.0,40.542499450911485,0.2670149037041142

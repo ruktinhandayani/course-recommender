@@ -1,0 +1,7 @@
+visualization,artifact_path
+Split rows distribution,paper_ready_figures/01_split_rows_distribution.png
+Train interactions per user,paper_ready_figures/02_train_interactions_per_user_distribution.png
+Top-20 train course popularity,paper_ready_figures/03_top20_train_course_popularity.png
+Top-20 test target distribution,paper_ready_figures/04_top20_test_target_distribution.png
+Top-20 similarity recommendation frequency,paper_ready_figures/05_top20_similarity_recommendation_frequency.png
+Similarity ground-truth rank distribution,paper_ready_figures/06_similarity_ground_truth_rank_distribution.png
