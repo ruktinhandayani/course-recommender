@@ -1,0 +1,12 @@
+.git
+.venv
+.python311
+.pytest_cache
+__pycache__
+*.pyc
+frontend/node_modules
+frontend/dist
+course_recommender_artifacts
+data
+notebooks
+reports
